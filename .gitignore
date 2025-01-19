@@ -1,0 +1,10 @@
+# files that shouldn't be shared
+.bak
+
+# useless
+.DS_Store
+
+# binaries and export
+bin/
+dist/
+export/
