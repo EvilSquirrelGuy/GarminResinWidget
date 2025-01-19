@@ -1,5 +1,6 @@
 # files that shouldn't be shared
 .bak
+.good
 
 # useless
 .DS_Store
@@ -8,3 +9,6 @@
 bin/
 dist/
 export/
+
+.prg
+.SET
