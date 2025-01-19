@@ -16,7 +16,8 @@ You can download the widget off the Garmin App Store at the link below:
 ## Supported Models
 
 * vívoactive 5
-* more soon?
+* Forerunner 265
+* Forerunner 265S
 
 ## Setup
 
