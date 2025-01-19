@@ -1,0 +1,30 @@
+<strings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://developer.garmin.com/downloads/connect-iq/resources.xsd">
+    <string id="AppName">Resin Widget</string>
+
+    <string id="appGlanceTitle">Original Resin</string>
+    <string id="appTitle">Original Resin</string>
+
+    <string id="authGroup">Authentication</string>
+    <string id="authGroupDesc">Put your HoYoLAB cookies here in order to be able to access your account</string>
+
+    <string id="accGroup">Account</string>
+    <string id="accGroupDesc">Put your account info here in order to load the correct profile</string>
+    
+    <string id="ltoken_v2_cookie">ltoken_v2 Cookie</string>
+    <string id="ltuid_v2_cookie">ltuid_v2 Cookie</string>
+
+    <string id="game_uid">Genshin UID</string>
+    <string id="region">Account Region</string>
+
+    <string id="game_region_na">America</string>
+    <string id="game_region_eu">Europe</string>
+    <string id="game_region_asia">Asia</string>
+    <string id="game_region_sar">HK, TW, MO</string>
+
+    <string id="abbr_days">d</string>    
+    <string id="abbr_hours">h</string>
+    <string id="abbr_minutes">m</string>
+    <string id="abbr_seconds">s</string>
+    <string id="time_left">left</string>
+
+</strings>

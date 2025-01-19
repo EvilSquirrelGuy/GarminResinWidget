@@ -1,0 +1,6 @@
+<properties>
+  <property id="ltoken_v2" type="string"></property>
+  <property id="ltuid_v2" type="number">0</property>
+  <property id="game_uid" type="number">0</property>
+  <property id="region" type="string"></property>
+</properties>

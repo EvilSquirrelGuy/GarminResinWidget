@@ -1,0 +1,216 @@
+[ @file = "/Users/squirrel/git/GarminResinWidget/source/ResinGlanceView.mc"; @line = 1; ]
+import Toybox.Graphics;
+[ @file = "/Users/squirrel/git/GarminResinWidget/source/ResinGlanceView.mc"; @line = 2; ]
+import Toybox.WatchUi;
+[ @file = "/Users/squirrel/git/GarminResinWidget/source/ResinGlanceView.mc"; @line = 3; ]
+import Toybox.Lang;
+[ @file = "/Users/squirrel/git/GarminResinWidget/source/ResinGlanceView.mc"; @line = 6; glance = true; ]
+class ResinGlanceView extends WatchUi.GlanceView{
+    [ @file = "/Users/squirrel/git/GarminResinWidget/source/ResinGlanceView.mc"; @line = 6; ]
+    <init> {
+    }
+    [ @file = "/Users/squirrel/git/GarminResinWidget/source/ResinGlanceView.mc"; @line = 6; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/squirrel/git/GarminResinWidget/source/ResinGlanceView.mc"; @line = 8; @position = 8; ]
+    var resinData = null;
+    [ @file = "/Users/squirrel/git/GarminResinWidget/source/ResinGlanceView.mc"; @line = 11; ]
+    function initialize() as Void {
+_Users_squirrel_git_GarminResinWidget_source_ResinGlanceView_mc_11_26_13_4_start:
+[ "/Users/squirrel/git/GarminResinWidget/source/ResinGlanceView.mc" 12 8 ]
+        %tmp.2 = getv ? :GlanceView;
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+_Users_squirrel_git_GarminResinWidget_source_ResinGlanceView_mc_11_26_13_4_stop:
+    }
+    [ @file = "/Users/squirrel/git/GarminResinWidget/source/ResinGlanceView.mc"; @line = 16; ]
+    function onLayout(dc as Dc) as Void {
+    }
+    [ @file = "/Users/squirrel/git/GarminResinWidget/source/ResinGlanceView.mc"; @line = 23; ]
+    function onShow() as Void {
+    }
+    [ @file = "/Users/squirrel/git/GarminResinWidget/source/ResinGlanceView.mc"; @line = 27; ]
+    function onUpdate(dc as Dc) as Void {
+_Users_squirrel_git_GarminResinWidget_source_ResinGlanceView_mc_27_40_57_4_start:
+[ "/Users/squirrel/git/GarminResinWidget/source/ResinGlanceView.mc" 28 8 ]
+        [ "_Users_squirrel_git_GarminResinWidget_source_ResinGlanceView_mc_27_40_57_4_start" "_Users_squirrel_git_GarminResinWidget_source_ResinGlanceView_mc_27_40_57_4_stop" ]
+        %width.1 = local;
+        %tmp.1 = lgetv %dc;
+        %tmp.2 = getv function %tmp.1 :getWidth;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %width.1 %tmp.3;
+        [ "_Users_squirrel_git_GarminResinWidget_source_ResinGlanceView_mc_27_40_57_4_start" "_Users_squirrel_git_GarminResinWidget_source_ResinGlanceView_mc_27_40_57_4_stop" ]
+        %height.2 = local;
+        %tmp.4 = lgetv %dc;
+        %tmp.5 = getv function %tmp.4 :getHeight;
+        %tmp.6 = invoke %tmp.4 %tmp.5();
+        lputv %height.2 %tmp.6;
+[ "/Users/squirrel/git/GarminResinWidget/source/ResinGlanceView.mc" 30 8 ]
+        %tmp.7 = lgetv %dc;
+        %tmp.8 = getv function %tmp.7 :setColor;
+        %tmp.9 = getm $.Toybox.Graphics;
+        %tmp.10 = getv %tmp.9 :COLOR_WHITE;
+        %tmp.11 = getm $.Toybox.Graphics;
+        %tmp.12 = getv %tmp.11 :COLOR_TRANSPARENT;
+        invoke %tmp.7 %tmp.8(%tmp.10, %tmp.12);
+[ "/Users/squirrel/git/GarminResinWidget/source/ResinGlanceView.mc" 32 8 ]
+        %tmp.13 = lgetv %dc;
+        %tmp.14 = getv function %tmp.13 :drawText;
+        %tmp.15 = 0;
+        %tmp.16 = 8;
+        %tmp.17 = getm $.Toybox.Graphics;
+        %tmp.18 = getv %tmp.17 :FONT_GLANCE;
+        %tmp.19 = "Original Resin";
+        %tmp.20 = getm $.Toybox.Graphics;
+        %tmp.21 = getv %tmp.20 :TEXT_JUSTIFY_LEFT;
+        invoke %tmp.13 %tmp.14(%tmp.15, %tmp.16, %tmp.18, %tmp.19, %tmp.21);
+[ "/Users/squirrel/git/GarminResinWidget/source/ResinGlanceView.mc" 33 8 ]
+        [ "_Users_squirrel_git_GarminResinWidget_source_ResinGlanceView_mc_27_40_57_4_start" "_Users_squirrel_git_GarminResinWidget_source_ResinGlanceView_mc_27_40_57_4_stop" ]
+        %offset.3 = local;
+        %tmp.22 = getm $.Toybox.Graphics;
+        %tmp.23 = getv function %tmp.22 :getFontHeight;
+        %tmp.24 = getm $.Toybox.Graphics;
+        %tmp.25 = getv %tmp.24 :FONT_GLANCE;
+        %tmp.26 = invoke %tmp.22 %tmp.23(%tmp.25);
+        lputv %offset.3 %tmp.26;
+[ "/Users/squirrel/git/GarminResinWidget/source/ResinGlanceView.mc" 36 8 ]
+        %tmp.27 = lgetv %dc;
+        %tmp.28 = getv function %tmp.27 :setColor;
+        %tmp.29 = getm $.Toybox.Graphics;
+        %tmp.30 = getv %tmp.29 :COLOR_DK_GRAY;
+        %tmp.31 = getm $.Toybox.Graphics;
+        %tmp.32 = getv %tmp.31 :COLOR_TRANSPARENT;
+        invoke %tmp.27 %tmp.28(%tmp.30, %tmp.32);
+[ "/Users/squirrel/git/GarminResinWidget/source/ResinGlanceView.mc" 37 8 ]
+        %tmp.33 = lgetv %dc;
+        %tmp.34 = getv function %tmp.33 :fillRectangle;
+        %tmp.35 = 0;
+        %tmp.37 = lgetv %height.2;
+        %tmp.38 = 2;
+        %tmp.39 = div %tmp.37 %tmp.38;
+        %tmp.41 = lgetv %width.1;
+        %tmp.42 = 8;
+        invoke %tmp.33 %tmp.34(%tmp.35, %tmp.39, %tmp.41, %tmp.42);
+[ "/Users/squirrel/git/GarminResinWidget/source/ResinGlanceView.mc" 39 8 ]
+_Users_squirrel_git_GarminResinWidget_source_ResinGlanceView_mc_39_8_56_8_if_stmt:
+        %tmp.44 = getv ? :resinData;
+        %tmp.45 = null;
+        %tmp.46 = ne %tmp.44 %tmp.45;
+        bf %tmp.46 @_Users_squirrel_git_GarminResinWidget_source_ResinGlanceView_mc_39_8_56_8_if_false;
+_Users_squirrel_git_GarminResinWidget_source_ResinGlanceView_mc_39_8_56_8_if_true:
+_Users_squirrel_git_GarminResinWidget_source_ResinGlanceView_mc_39_31_54_8_start:
+[ "/Users/squirrel/git/GarminResinWidget/source/ResinGlanceView.mc" 41 12 ]
+        %tmp.47 = lgetv %dc;
+        %tmp.48 = getv function %tmp.47 :setColor;
+        %tmp.49 = getm $.Toybox.Graphics;
+        %tmp.50 = getv %tmp.49 :COLOR_WHITE;
+        %tmp.51 = getm $.Toybox.Graphics;
+        %tmp.52 = getv %tmp.51 :COLOR_TRANSPARENT;
+        invoke %tmp.47 %tmp.48(%tmp.50, %tmp.52);
+[ "/Users/squirrel/git/GarminResinWidget/source/ResinGlanceView.mc" 43 12 ]
+        %tmp.53 = lgetv %dc;
+        %tmp.54 = getv function %tmp.53 :drawText;
+        %tmp.55 = 0;
+        %tmp.57 = lgetv %height.2;
+        %tmp.58 = 16;
+        %tmp.59 = sub %tmp.57 %tmp.58;
+        %tmp.61 = lgetv %offset.3;
+        %tmp.62 = sub %tmp.59 %tmp.61;
+        %tmp.63 = getm $.Toybox.Graphics;
+        %tmp.64 = getv %tmp.63 :FONT_GLANCE_NUMBER;
+        %tmp.66 = getv ? :resinData;
+        %tmp.67 = getv %tmp.66 :currentResin;
+        %tmp.68 = getv function %tmp.67 :toString;
+        %tmp.69 = invoke %tmp.67 %tmp.68();
+        %tmp.70 = getm $.Toybox.Graphics;
+        %tmp.71 = getv %tmp.70 :TEXT_JUSTIFY_LEFT;
+        invoke %tmp.53 %tmp.54(%tmp.55, %tmp.62, %tmp.64, %tmp.69, %tmp.71);
+[ "/Users/squirrel/git/GarminResinWidget/source/ResinGlanceView.mc" 45 12 ]
+        %tmp.72 = lgetv %dc;
+        %tmp.73 = getv function %tmp.72 :drawText;
+        %tmp.75 = lgetv %width.1;
+        %tmp.77 = lgetv %height.2;
+        %tmp.78 = 16;
+        %tmp.79 = sub %tmp.77 %tmp.78;
+        %tmp.81 = lgetv %offset.3;
+        %tmp.82 = sub %tmp.79 %tmp.81;
+        %tmp.83 = getm $.Toybox.Graphics;
+        %tmp.84 = getv %tmp.83 :FONT_GLANCE_NUMBER;
+        %tmp.86 = getv ? :resinData;
+        %tmp.87 = getv %tmp.86 :maxResin;
+        %tmp.88 = getv function %tmp.87 :toString;
+        %tmp.89 = invoke %tmp.87 %tmp.88();
+        %tmp.90 = getm $.Toybox.Graphics;
+        %tmp.91 = getv %tmp.90 :TEXT_JUSTIFY_RIGHT;
+        invoke %tmp.72 %tmp.73(%tmp.75, %tmp.82, %tmp.84, %tmp.89, %tmp.91);
+[ "/Users/squirrel/git/GarminResinWidget/source/ResinGlanceView.mc" 48 12 ]
+        %tmp.92 = lgetv %dc;
+        %tmp.93 = getv function %tmp.92 :setColor;
+        %tmp.94 = 0x4463b7;
+        %tmp.95 = getm $.Toybox.Graphics;
+        %tmp.96 = getv %tmp.95 :COLOR_TRANSPARENT;
+        invoke %tmp.92 %tmp.93(%tmp.94, %tmp.96);
+[ "/Users/squirrel/git/GarminResinWidget/source/ResinGlanceView.mc" 50 12 ]
+        [ "_Users_squirrel_git_GarminResinWidget_source_ResinGlanceView_mc_39_31_54_8_start" "_Users_squirrel_git_GarminResinWidget_source_ResinGlanceView_mc_39_31_54_8_stop" ]
+        %pbarWidth.4 = local;
+        %tmp.98 = getv ? :resinData;
+        %tmp.99 = getv %tmp.98 :currentResin;
+        %tmp.101 = lgetv %width.1;
+        %tmp.102 = mul %tmp.99 %tmp.101;
+        %tmp.104 = getv ? :resinData;
+        %tmp.105 = getv %tmp.104 :maxResin;
+        %tmp.106 = div %tmp.102 %tmp.105;
+        lputv %pbarWidth.4 %tmp.106;
+[ "/Users/squirrel/git/GarminResinWidget/source/ResinGlanceView.mc" 53 12 ]
+        %tmp.107 = lgetv %dc;
+        %tmp.108 = getv function %tmp.107 :fillRectangle;
+        %tmp.109 = 0;
+        %tmp.111 = lgetv %height.2;
+        %tmp.112 = 2;
+        %tmp.113 = div %tmp.111 %tmp.112;
+        %tmp.115 = lgetv %pbarWidth.4;
+        %tmp.116 = 8;
+        invoke %tmp.107 %tmp.108(%tmp.109, %tmp.113, %tmp.115, %tmp.116);
+_Users_squirrel_git_GarminResinWidget_source_ResinGlanceView_mc_39_31_54_8_stop:
+        goto @_Users_squirrel_git_GarminResinWidget_source_ResinGlanceView_mc_39_8_56_8_if_end;
+_Users_squirrel_git_GarminResinWidget_source_ResinGlanceView_mc_39_8_56_8_if_false:
+_Users_squirrel_git_GarminResinWidget_source_ResinGlanceView_mc_54_15_56_8_start:
+[ "/Users/squirrel/git/GarminResinWidget/source/ResinGlanceView.mc" 55 12 ]
+        %tmp.117 = lgetv %dc;
+        %tmp.118 = getv function %tmp.117 :drawText;
+        %tmp.119 = 0;
+        %tmp.121 = lgetv %height.2;
+        %tmp.122 = 16;
+        %tmp.123 = sub %tmp.121 %tmp.122;
+        %tmp.125 = lgetv %offset.3;
+        %tmp.126 = sub %tmp.123 %tmp.125;
+        %tmp.127 = getm $.Toybox.Graphics;
+        %tmp.128 = getv %tmp.127 :FONT_GLANCE_NUMBER;
+        %tmp.129 = "No data";
+        %tmp.130 = getm $.Toybox.Graphics;
+        %tmp.131 = getv %tmp.130 :TEXT_JUSTIFY_LEFT;
+        invoke %tmp.117 %tmp.118(%tmp.119, %tmp.126, %tmp.128, %tmp.129, %tmp.131);
+_Users_squirrel_git_GarminResinWidget_source_ResinGlanceView_mc_54_15_56_8_stop:
+_Users_squirrel_git_GarminResinWidget_source_ResinGlanceView_mc_39_8_56_8_if_end:
+_Users_squirrel_git_GarminResinWidget_source_ResinGlanceView_mc_27_40_57_4_stop:
+    }
+    [ @file = "/Users/squirrel/git/GarminResinWidget/source/ResinGlanceView.mc"; @line = 62; ]
+    function onHide() as Void {
+    }
+    [ @file = "/Users/squirrel/git/GarminResinWidget/source/ResinGlanceView.mc"; @line = 65; ]
+    function onReceive(data as ResinData) as Void {
+_Users_squirrel_git_GarminResinWidget_source_ResinGlanceView_mc_65_50_68_4_start:
+[ "/Users/squirrel/git/GarminResinWidget/source/ResinGlanceView.mc" 66 8 ]
+        %tmp.2 = lgetv %data;
+        putv self :resinData %tmp.2;
+[ "/Users/squirrel/git/GarminResinWidget/source/ResinGlanceView.mc" 67 8 ]
+        %tmp.3 = getm $.Toybox.WatchUi;
+        %tmp.4 = getv function %tmp.3 :requestUpdate;
+        invoke %tmp.3 %tmp.4();
+_Users_squirrel_git_GarminResinWidget_source_ResinGlanceView_mc_65_50_68_4_stop:
+    }
+}
+[ @file = "/Users/squirrel/git/GarminResinWidget/source/ResinGlanceView.mc"; @line = 1; ]
+<init> {
+}

@@ -1,0 +1,20 @@
+<settings>
+    <group id="authGroup" title="@Strings.authGroup" description="@Strings.authGroupDesc">
+        <setting propertyKey="@Properties.ltoken_v2" title="@Strings.ltoken_v2_cookie">
+            <settingConfig type="alphanumeric" />
+        </setting>
+
+        <setting propertyKey="@Properties.ltuid_v2" title="@Strings.ltuid_v2_cookie">
+            <settingConfig type="numeric" />
+        </setting>
+    </group>
+    <group id="accGroup" title="@Strings.accGroup" description="@Strings.accGroupDesc">
+        <setting propertyKey="@Properties.game_uid" title="@Strings.game_uid">
+            <settingConfig type="numeric" />
+        </setting>
+
+        <setting propertyKey="@Properties.region" title="@Strings.region">
+            <settingConfig type="alphanumeric" readonly="true" />
+        </setting>
+    </group>
+</settings>

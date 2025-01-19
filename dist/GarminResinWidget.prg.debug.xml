@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<debugInfo>
+    <manifest filename="/Users/squirrel/git/GarminResinWidget/manifest.xml"/>
+    <pcToLineNum>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinGlanceView.mc" id="1" lineNum="6" parent="globals/ResinGlanceView" pc="268435460" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinWidget.mc" id="2" lineNum="6" parent="globals/ResinWidget" pc="268435472" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinModel.mc" id="3" lineNum="56" parent="globals/ResinModel" pc="268435484" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinModel.mc" id="3" lineNum="57" parent="globals/ResinModel" pc="268435508" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinModel.mc" id="3" lineNum="58" parent="globals/ResinModel" pc="268435532" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinModel.mc" id="3" lineNum="59" parent="globals/ResinModel" pc="268435556" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinDelegate.mc" id="4" lineNum="5" parent="globals/ResinDelegate" pc="268435581" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinGlanceView.mc" id="6" lineNum="16" parent="globals/ResinGlanceView" pc="268435593" symbol="onLayout"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinGlanceView.mc" id="7" lineNum="11" parent="globals/ResinGlanceView" pc="268435596" symbol="initialize"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinGlanceView.mc" id="7" lineNum="12" parent="globals/ResinGlanceView" pc="268435598" symbol="initialize"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinGlanceView.mc" id="9" lineNum="65" parent="globals/ResinGlanceView" pc="268435611" symbol="onReceive"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinGlanceView.mc" id="9" lineNum="66" parent="globals/ResinGlanceView" pc="268435613" symbol="onReceive"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinGlanceView.mc" id="9" lineNum="67" parent="globals/ResinGlanceView" pc="268435622" symbol="onReceive"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinGlanceView.mc" id="10" lineNum="27" parent="globals/ResinGlanceView" pc="268435634" symbol="onUpdate"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinGlanceView.mc" id="10" lineNum="28" parent="globals/ResinGlanceView" pc="268435637" symbol="onUpdate"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinGlanceView.mc" id="10" lineNum="30" parent="globals/ResinGlanceView" pc="268435655" symbol="onUpdate"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinGlanceView.mc" id="10" lineNum="32" parent="globals/ResinGlanceView" pc="268435672" symbol="onUpdate"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinGlanceView.mc" id="10" lineNum="33" parent="globals/ResinGlanceView" pc="268435694" symbol="onUpdate"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinGlanceView.mc" id="10" lineNum="36" parent="globals/ResinGlanceView" pc="268435710" symbol="onUpdate"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinGlanceView.mc" id="10" lineNum="37" parent="globals/ResinGlanceView" pc="268435726" symbol="onUpdate"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinGlanceView.mc" id="10" lineNum="39" parent="globals/ResinGlanceView" pc="268435746" symbol="onUpdate"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinGlanceView.mc" id="10" lineNum="41" parent="globals/ResinGlanceView" pc="268435755" symbol="onUpdate"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinGlanceView.mc" id="10" lineNum="43" parent="globals/ResinGlanceView" pc="268435772" symbol="onUpdate"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinGlanceView.mc" id="10" lineNum="45" parent="globals/ResinGlanceView" pc="268435811" symbol="onUpdate"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinGlanceView.mc" id="10" lineNum="48" parent="globals/ResinGlanceView" pc="268435850" symbol="onUpdate"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinGlanceView.mc" id="10" lineNum="50" parent="globals/ResinGlanceView" pc="268435866" symbol="onUpdate"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinGlanceView.mc" id="10" lineNum="53" parent="globals/ResinGlanceView" pc="268435892" symbol="onUpdate"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinGlanceView.mc" id="10" lineNum="55" parent="globals/ResinGlanceView" pc="268435915" symbol="onUpdate"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinWidget.mc" id="11" lineNum="19" parent="globals/ResinWidget" pc="268435944" symbol="onStart"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinWidget.mc" id="12" lineNum="26" parent="globals/ResinWidget" pc="268435947" symbol="onSettingsChanged"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinWidget.mc" id="12" lineNum="27" parent="globals/ResinWidget" pc="268435950" symbol="onSettingsChanged"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinWidget.mc" id="12" lineNum="28" parent="globals/ResinWidget" pc="268435969" symbol="onSettingsChanged"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinWidget.mc" id="12" lineNum="29" parent="globals/ResinWidget" pc="268435998" symbol="onSettingsChanged"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinWidget.mc" id="12" lineNum="31" parent="globals/ResinWidget" pc="268436005" symbol="onSettingsChanged"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinWidget.mc" id="12" lineNum="31" parent="globals/ResinWidget" pc="268436013" symbol="onSettingsChanged"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinWidget.mc" id="12" lineNum="32" parent="globals/ResinWidget" pc="268436023" symbol="onSettingsChanged"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinWidget.mc" id="12" lineNum="32" parent="globals/ResinWidget" pc="268436031" symbol="onSettingsChanged"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinWidget.mc" id="12" lineNum="33" parent="globals/ResinWidget" pc="268436041" symbol="onSettingsChanged"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinWidget.mc" id="12" lineNum="33" parent="globals/ResinWidget" pc="268436076" symbol="onSettingsChanged"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinWidget.mc" id="12" lineNum="34" parent="globals/ResinWidget" pc="268436086" symbol="onSettingsChanged"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinWidget.mc" id="12" lineNum="34" parent="globals/ResinWidget" pc="268436094" symbol="onSettingsChanged"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinWidget.mc" id="12" lineNum="36" parent="globals/ResinWidget" pc="268436104" symbol="onSettingsChanged"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinWidget.mc" id="12" lineNum="38" parent="globals/ResinWidget" pc="268436145" symbol="onSettingsChanged"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinWidget.mc" id="12" lineNum="40" parent="globals/ResinWidget" pc="268436165" symbol="onSettingsChanged"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinWidget.mc" id="13" lineNum="59" parent="globals/ResinWidget" pc="268436178" symbol="getGlanceTheme"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinWidget.mc" id="13" lineNum="60" parent="globals/ResinWidget" pc="268436180" symbol="getGlanceTheme"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinWidget.mc" id="14" lineNum="44" parent="globals/ResinWidget" pc="268436183" symbol="getInitialView"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinWidget.mc" id="14" lineNum="45" parent="globals/ResinWidget" pc="268436185" symbol="getInitialView"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinWidget.mc" id="14" lineNum="46" parent="globals/ResinWidget" pc="268436214" symbol="getInitialView"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinWidget.mc" id="14" lineNum="47" parent="globals/ResinWidget" pc="268436261" symbol="getInitialView"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinWidget.mc" id="14" lineNum="48" parent="globals/ResinWidget" pc="268436295" symbol="getInitialView"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinWidget.mc" id="15" lineNum="14" parent="globals/ResinWidget" pc="268436316" symbol="initialize"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinWidget.mc" id="15" lineNum="15" parent="globals/ResinWidget" pc="268436318" symbol="initialize"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinWidget.mc" id="16" lineNum="52" parent="globals/ResinWidget" pc="268436331" symbol="getGlanceView"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinWidget.mc" id="16" lineNum="53" parent="globals/ResinWidget" pc="268436333" symbol="getGlanceView"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinWidget.mc" id="16" lineNum="54" parent="globals/ResinWidget" pc="268436362" symbol="getGlanceView"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinWidget.mc" id="16" lineNum="55" parent="globals/ResinWidget" pc="268436409" symbol="getGlanceView"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinWidget.mc" id="16" lineNum="56" parent="globals/ResinWidget" pc="268436443" symbol="getGlanceView"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinWidget.mc" id="17" lineNum="23" parent="globals/ResinWidget" pc="268436456" symbol="onStop"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinModel.mc" id="18" lineNum="15" parent="globals/ResinData" pc="268436459" symbol="getDuration"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinModel.mc" id="18" lineNum="16" parent="globals/ResinData" pc="268436462" symbol="getDuration"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinModel.mc" id="18" lineNum="17" parent="globals/ResinData" pc="268436496" symbol="getDuration"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinModel.mc" id="18" lineNum="18" parent="globals/ResinData" pc="268436530" symbol="getDuration"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinModel.mc" id="18" lineNum="19" parent="globals/ResinData" pc="268436564" symbol="getDuration"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinModel.mc" id="18" lineNum="20" parent="globals/ResinData" pc="268436598" symbol="getDuration"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinModel.mc" id="18" lineNum="22" parent="globals/ResinData" pc="268436632" symbol="getDuration"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinModel.mc" id="18" lineNum="23" parent="globals/ResinData" pc="268436642" symbol="getDuration"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinModel.mc" id="18" lineNum="26" parent="globals/ResinData" pc="268436651" symbol="getDuration"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinModel.mc" id="18" lineNum="28" parent="globals/ResinData" pc="268436658" symbol="getDuration"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinModel.mc" id="18" lineNum="29" parent="globals/ResinData" pc="268436671" symbol="getDuration"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinModel.mc" id="18" lineNum="32" parent="globals/ResinData" pc="268436710" symbol="getDuration"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinModel.mc" id="18" lineNum="33" parent="globals/ResinData" pc="268436722" symbol="getDuration"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinModel.mc" id="18" lineNum="36" parent="globals/ResinData" pc="268436765" symbol="getDuration"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinModel.mc" id="18" lineNum="37" parent="globals/ResinData" pc="268436776" symbol="getDuration"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinModel.mc" id="18" lineNum="40" parent="globals/ResinData" pc="268436817" symbol="getDuration"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinModel.mc" id="18" lineNum="42" parent="globals/ResinData" pc="268436854" symbol="getDuration"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinModel.mc" id="19" lineNum="11" parent="globals/ResinData" pc="268436857" symbol="getString"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinModel.mc" id="19" lineNum="12" parent="globals/ResinData" pc="268436859" symbol="getString"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinModel.mc" id="21" lineNum="104" parent="globals/ResinModel" pc="268436889" symbol="onResponse"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinModel.mc" id="21" lineNum="105" parent="globals/ResinModel" pc="268436891" symbol="onResponse"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinModel.mc" id="21" lineNum="106" parent="globals/ResinModel" pc="268436900" symbol="onResponse"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinModel.mc" id="21" lineNum="107" parent="globals/ResinModel" pc="268436919" symbol="onResponse"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinModel.mc" id="21" lineNum="109" parent="globals/ResinModel" pc="268436945" symbol="onResponse"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinModel.mc" id="21" lineNum="112" parent="globals/ResinModel" pc="268436982" symbol="onResponse"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinModel.mc" id="22" lineNum="71" parent="globals/ResinModel" pc="268437010" symbol="makeApiCall"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinModel.mc" id="22" lineNum="73" parent="globals/ResinModel" pc="268437013" symbol="makeApiCall"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinModel.mc" id="22" lineNum="74" parent="globals/ResinModel" pc="268437029" symbol="makeApiCall"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinModel.mc" id="22" lineNum="75" parent="globals/ResinModel" pc="268437048" symbol="makeApiCall"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinModel.mc" id="22" lineNum="78" parent="globals/ResinModel" pc="268437052" symbol="makeApiCall"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinModel.mc" id="22" lineNum="83" parent="globals/ResinModel" pc="268437081" symbol="makeApiCall"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinModel.mc" id="22" lineNum="86" parent="globals/ResinModel" pc="268437118" symbol="makeApiCall"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinModel.mc" id="22" lineNum="94" parent="globals/ResinModel" pc="268437133" symbol="makeApiCall"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinModel.mc" id="22" lineNum="100" parent="globals/ResinModel" pc="268437163" symbol="makeApiCall"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinModel.mc" id="23" lineNum="65" parent="globals/ResinModel" pc="268437199" symbol="initialize"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinModel.mc" id="23" lineNum="66" parent="globals/ResinModel" pc="268437201" symbol="initialize"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinModel.mc" id="23" lineNum="67" parent="globals/ResinModel" pc="268437220" symbol="initialize"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinModel.mc" id="23" lineNum="68" parent="globals/ResinModel" pc="268437229" symbol="initialize"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinModel.mc" id="24" lineNum="116" parent="globals/ResinModel" pc="268437237" symbol="handleData"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinModel.mc" id="24" lineNum="119" parent="globals/ResinModel" pc="268437239" symbol="handleData"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinModel.mc" id="24" lineNum="120" parent="globals/ResinModel" pc="268437248" symbol="handleData"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinModel.mc" id="24" lineNum="123" parent="globals/ResinModel" pc="268437280" symbol="handleData"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinModel.mc" id="24" lineNum="124" parent="globals/ResinModel" pc="268437311" symbol="handleData"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinModel.mc" id="24" lineNum="125" parent="globals/ResinModel" pc="268437342" symbol="handleData"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinModel.mc" id="24" lineNum="127" parent="globals/ResinModel" pc="268437373" symbol="handleData"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinDelegate.mc" id="25" lineNum="8" parent="globals/ResinDelegate" pc="268437393" symbol="initialize"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinDelegate.mc" id="25" lineNum="9" parent="globals/ResinDelegate" pc="268437395" symbol="initialize"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinDelegate.mc" id="25" lineNum="10" parent="globals/ResinDelegate" pc="268437404" symbol="initialize"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinDelegate.mc" id="26" lineNum="13" parent="globals/ResinDelegate" pc="268437421" symbol="onSelect"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinDelegate.mc" id="26" lineNum="15" parent="globals/ResinDelegate" pc="268437423" symbol="onSelect"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinDelegate.mc" id="26" lineNum="16" parent="globals/ResinDelegate" pc="268437435" symbol="onSelect"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinWidget.mc" id="27" lineNum="65" parent="globals" pc="268437437" symbol="getApp"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinWidget.mc" id="27" lineNum="66" parent="globals" pc="268437447" symbol="getApp"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/dist/gen/006-B4426-00/source/Rez.mcgen" id="28" lineNum="7" parent="globals/Rez" pc="268437458" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinView.mc" id="29" lineNum="4" parent="globals/ResinView" pc="268437478" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinView.mc" id="31" lineNum="20" parent="globals/ResinView" pc="268437490" symbol="onLayout"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinView.mc" id="32" lineNum="66" parent="globals/ResinView" pc="268437493" symbol="drawRadial"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinView.mc" id="32" lineNum="79" parent="globals/ResinView" pc="268437496" symbol="drawRadial"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinView.mc" id="32" lineNum="81" parent="globals/ResinView" pc="268437514" symbol="drawRadial"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinView.mc" id="32" lineNum="82" parent="globals/ResinView" pc="268437525" symbol="drawRadial"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinView.mc" id="32" lineNum="84" parent="globals/ResinView" pc="268437536" symbol="drawRadial"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinView.mc" id="32" lineNum="85" parent="globals/ResinView" pc="268437567" symbol="drawRadial"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinView.mc" id="32" lineNum="86" parent="globals/ResinView" pc="268437601" symbol="drawRadial"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinView.mc" id="32" lineNum="87" parent="globals/ResinView" pc="268437635" symbol="drawRadial"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinView.mc" id="33" lineNum="13" parent="globals/ResinView" pc="268437673" symbol="initialize"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinView.mc" id="33" lineNum="14" parent="globals/ResinView" pc="268437675" symbol="initialize"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinView.mc" id="33" lineNum="15" parent="globals/ResinView" pc="268437713" symbol="initialize"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinView.mc" id="33" lineNum="16" parent="globals/ResinView" pc="268437751" symbol="initialize"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinView.mc" id="35" lineNum="91" parent="globals/ResinView" pc="268437764" symbol="onReceive"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinView.mc" id="35" lineNum="92" parent="globals/ResinView" pc="268437766" symbol="onReceive"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinView.mc" id="35" lineNum="93" parent="globals/ResinView" pc="268437775" symbol="onReceive"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinView.mc" id="36" lineNum="31" parent="globals/ResinView" pc="268437787" symbol="onUpdate"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinView.mc" id="36" lineNum="32" parent="globals/ResinView" pc="268437790" symbol="onUpdate"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinView.mc" id="36" lineNum="34" parent="globals/ResinView" pc="268437808" symbol="onUpdate"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinView.mc" id="36" lineNum="35" parent="globals/ResinView" pc="268437824" symbol="onUpdate"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinView.mc" id="36" lineNum="36" parent="globals/ResinView" pc="268437832" symbol="onUpdate"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinView.mc" id="36" lineNum="37" parent="globals/ResinView" pc="268437849" symbol="onUpdate"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinView.mc" id="36" lineNum="39" parent="globals/ResinView" pc="268437861" symbol="onUpdate"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinView.mc" id="36" lineNum="41" parent="globals/ResinView" pc="268437893" symbol="onUpdate"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinView.mc" id="36" lineNum="43" parent="globals/ResinView" pc="268437902" symbol="onUpdate"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinView.mc" id="36" lineNum="45" parent="globals/ResinView" pc="268437947" symbol="onUpdate"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinView.mc" id="36" lineNum="47" parent="globals/ResinView" pc="268437985" symbol="onUpdate"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinView.mc" id="36" lineNum="48" parent="globals/ResinView" pc="268437997" symbol="onUpdate"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinView.mc" id="36" lineNum="50" parent="globals/ResinView" pc="268438013" symbol="onUpdate"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinView.mc" id="36" lineNum="53" parent="globals/ResinView" pc="268438053" symbol="onUpdate"/>
+        <entry filename="/Users/squirrel/git/GarminResinWidget/source/ResinView.mc" id="36" lineNum="55" parent="globals/ResinView" pc="268438070" symbol="onUpdate"/>
+    </pcToLineNum>
+    <symbolTable>
+        <entry field="true" id="25" symbol="ltoken_v2"/>
+        <entry id="8388639" module="true" symbol="Graphics"/>
+        <entry field="true" id="46" symbol="appGlanceTitle"/>
+        <entry id="7" object="true" symbol="ResinGlanceView"/>
+        <entry id="8388632" method="true" symbol="&lt;init&gt;"/>
+        <entry field="true" id="26" symbol="ltuid_v2"/>
+        <entry id="8389683" method="true" symbol="onSettingsChanged"/>
+        <entry field="true" id="56" symbol="time_left"/>
+        <entry field="true" id="29" symbol="appTitle"/>
+        <entry field="true" id="13" symbol="resinDelegate"/>
+        <entry field="true" id="8388611" module="true" symbol="Toybox"/>
+        <entry id="8389108" method="true" symbol="onResponse"/>
+        <entry field="true" id="28" symbol="region"/>
+        <entry field="true" id="48" symbol="authGroupDesc"/>
+        <entry field="true" id="39" symbol="AppName"/>
+        <entry id="4" module="true" symbol="globals/Rez/Strings"/>
+        <entry id="8389594" symbol="headers"/>
+        <entry id="8388648" module="true" symbol="WatchUi"/>
+        <entry field="true" id="52" symbol="game_region_sar"/>
+        <entry id="30" method="true" symbol="drawRadial"/>
+        <entry field="true" id="22" symbol="UID"/>
+        <entry id="8390425" module="true" symbol="Properties"/>
+        <entry id="2" module="true" symbol="globals/Rez"/>
+        <entry field="true" id="32" symbol="resinIcon"/>
+        <entry id="5" object="true" symbol="ResinData"/>
+        <entry field="true" id="53" symbol="game_uid"/>
+        <entry id="8389124" method="true" symbol="onUpdate"/>
+        <entry field="true" id="42" symbol="abbr_minutes"/>
+        <entry field="true" id="55" symbol="ltuid_v2_cookie"/>
+        <entry id="8391753" method="true" symbol="getGlanceTheme"/>
+        <entry id="8388771" module="true" object="true" symbol="Drawables"/>
+        <entry field="true" id="16" symbol="resinView"/>
+        <entry id="8389275" method="true" symbol="getApp"/>
+        <entry field="true" id="31" symbol="resinDuration"/>
+        <entry field="true" id="54" symbol="ltoken_v2_cookie"/>
+        <entry field="true" id="33" symbol="resinString"/>
+        <entry id="24" method="true" symbol="handleData"/>
+        <entry id="8389122" method="true" symbol="onLayout"/>
+        <entry field="true" id="47" symbol="authGroup"/>
+        <entry id="27" method="true" symbol="makeApiCall"/>
+        <entry field="true" id="43" symbol="abbr_seconds"/>
+        <entry id="8388637" module="true" symbol="Communications"/>
+        <entry id="3" module="true" symbol="globals/Rez/Drawables"/>
+        <entry id="19" method="true" symbol="getString"/>
+        <entry id="8389844" symbol="responseType"/>
+        <entry id="18" method="true" symbol="getDuration"/>
+        <entry field="true" id="14" symbol="resinGlanceView"/>
+        <entry id="8388786" method="true" symbol="method"/>
+        <entry id="8388644" module="true" symbol="System"/>
+        <entry id="10" object="true" symbol="ResinWidget"/>
+        <entry field="true" id="41" symbol="abbr_hours"/>
+        <entry id="8389619" method="true" symbol="onSelect"/>
+        <entry id="8388769" module="true" object="true" symbol="Rez"/>
+        <entry id="11" method="true" symbol="onReceive"/>
+        <entry id="6" object="true" symbol="ResinDelegate"/>
+        <entry field="true" id="15" symbol="resinModel"/>
+        <entry id="8388640" module="true" symbol="Lang"/>
+        <entry field="true" id="34" symbol="LauncherIcon"/>
+        <entry id="8388610" symbol="statics"/>
+        <entry id="8389123" method="true" symbol="onShow"/>
+        <entry field="true" id="45" symbol="accGroupDesc"/>
+        <entry field="true" id="49" symbol="game_region_asia"/>
+        <entry field="true" id="51" symbol="game_region_na"/>
+        <entry id="8389350" module="true" symbol="globals"/>
+        <entry field="true" id="35" symbol="resin_192"/>
+        <entry id="8388770" module="true" object="true" symbol="Strings"/>
+        <entry id="8388702" method="true" symbol="initialize"/>
+        <entry field="true" id="50" symbol="game_region_eu"/>
+        <entry id="8389279" method="true" symbol="onStart"/>
+        <entry field="true" id="37" symbol="resin_96"/>
+        <entry id="8389280" method="true" symbol="getInitialView"/>
+        <entry id="8389281" method="true" symbol="onStop"/>
+        <entry field="true" id="38" symbol="resin_96_dark"/>
+        <entry field="true" id="21" symbol="remainingSeconds"/>
+        <entry field="true" id="40" symbol="abbr_days"/>
+        <entry field="true" id="44" symbol="accGroup"/>
+        <entry field="true" id="12" symbol="resinData"/>
+        <entry id="9" object="true" symbol="ResinView"/>
+        <entry field="true" id="20" symbol="maxResin"/>
+        <entry id="8" object="true" symbol="ResinModel"/>
+        <entry field="true" id="36" symbol="resin_192_dark"/>
+        <entry field="true" id="17" symbol="currentResin"/>
+        <entry id="8391457" method="true" symbol="getGlanceView"/>
+        <entry id="8389125" method="true" symbol="onHide"/>
+        <entry id="8388635" module="true" symbol="Application"/>
+        <entry field="true" id="23" symbol="callback"/>
+    </symbolTable>
+    <localVars>
+        <entry arg="true" endPc="268435633" name="data" stackId="1" startPc="268435611"/>
+        <entry arg="true" endPc="268435943" name="dc" stackId="1" startPc="268435634"/>
+        <entry endPc="268435942" name="width" stackId="2" startPc="268435637"/>
+        <entry endPc="268435942" name="height" stackId="3" startPc="268435637"/>
+        <entry endPc="268435942" name="offset" stackId="4" startPc="268435637"/>
+        <entry endPc="268435911" name="pbarWidth" stackId="5" startPc="268435755"/>
+        <entry endPc="268436176" name="UID" stackId="1" startPc="268435950"/>
+        <entry endPc="268436176" name="serverDigit" stackId="2" startPc="268435950"/>
+        <entry endPc="268436176" name="region" stackId="3" startPc="268435950"/>
+        <entry endPc="268436856" name="abbrDays" stackId="1" startPc="268436462"/>
+        <entry endPc="268436856" name="abbrHours" stackId="2" startPc="268436462"/>
+        <entry endPc="268436856" name="abbrMins" stackId="3" startPc="268436462"/>
+        <entry endPc="268436856" name="abbrSecs" stackId="4" startPc="268436462"/>
+        <entry endPc="268436856" name="left" stackId="5" startPc="268436462"/>
+        <entry endPc="268436856" name="durationString" stackId="6" startPc="268436462"/>
+        <entry arg="true" endPc="268437009" name="responseCode" stackId="1" startPc="268436889"/>
+        <entry arg="true" endPc="268437009" name="data" stackId="2" startPc="268436889"/>
+        <entry endPc="268437197" name="params" stackId="1" startPc="268437013"/>
+        <entry endPc="268437197" name="cookieString" stackId="2" startPc="268437013"/>
+        <entry endPc="268437197" name="headers" stackId="3" startPc="268437013"/>
+        <entry endPc="268437197" name="options" stackId="4" startPc="268437013"/>
+        <entry arg="true" endPc="268437236" name="cb" stackId="1" startPc="268437199"/>
+        <entry arg="true" endPc="268437392" name="data" stackId="1" startPc="268437237"/>
+        <entry arg="true" endPc="268437420" name="model" stackId="1" startPc="268437393"/>
+        <entry arg="true" endPc="268437672" name="dc" stackId="1" startPc="268437493"/>
+        <entry arg="true" endPc="268437672" name="arcStart" stackId="2" startPc="268437493"/>
+        <entry arg="true" endPc="268437672" name="arcEnd" stackId="3" startPc="268437493"/>
+        <entry endPc="268437671" name="width" stackId="4" startPc="268437496"/>
+        <entry endPc="268437671" name="height" stackId="5" startPc="268437496"/>
+        <entry arg="true" endPc="268437786" name="data" stackId="1" startPc="268437764"/>
+        <entry arg="true" endPc="268438102" name="dc" stackId="1" startPc="268437787"/>
+        <entry endPc="268438101" name="width" stackId="2" startPc="268437790"/>
+        <entry endPc="268438101" name="height" stackId="3" startPc="268437790"/>
+    </localVars>
+    <deviceInfo deviceVersion="35026752466eceaff46011f2f33580ace85b3091" partNumber="006-B4426-00"/>
+    <annotations>
+        <annotationEntry annotation="glance" class="ResinWidget" module="globals" symbol="resinGlanceView"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ltoken_v2_cookie"/>
+        <annotationEntry annotation="glance" class="ResinGlanceView" module="globals" symbol="resinData"/>
+        <annotationEntry annotation="glance" class="ResinWidget" module="globals" symbol="getInitialView"/>
+        <annotationEntry annotation="glance" class="ResinData" module="globals" symbol="getDuration"/>
+        <annotationEntry annotation="glance" class="ResinData" module="globals" symbol="getString"/>
+        <annotationEntry annotation="glance" class="ResinData" module="globals" symbol="maxResin"/>
+        <annotationEntry annotation="glance" class="ResinModel" module="globals" symbol="UID"/>
+        <annotationEntry annotation="glance" class="ResinWidget" module="globals" symbol="getGlanceTheme"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ltuid_v2_cookie"/>
+        <annotationEntry annotation="glance" class="ResinWidget" module="globals" symbol="initialize"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="abbr_minutes"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="game_region_sar"/>
+        <annotationEntry annotation="glance" class="ResinModel" module="globals" symbol="makeApiCall"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="abbr_hours"/>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="resin_96_dark"/>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="resin_192"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="authGroup"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="authGroupDesc"/>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="resin_192_dark"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="abbr_days"/>
+        <annotationEntry annotation="glance" class="ResinGlanceView" module="globals" symbol="onReceive"/>
+        <annotationEntry annotation="glance" class="ResinWidget" module="globals" symbol="onSettingsChanged"/>
+        <annotationEntry annotation="glance" class="ResinModel" module="globals" symbol="URL"/>
+        <annotationEntry annotation="glance" class="ResinModel" module="globals" symbol="region"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="accGroup"/>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="resin_96"/>
+        <annotationEntry annotation="glance" class="ResinData" module="globals" symbol="currentResin"/>
+        <annotationEntry annotation="glance" class="ResinGlanceView" module="globals" symbol="onHide"/>
+        <annotationEntry annotation="glance" class="ResinWidget" module="globals" symbol="onStart"/>
+        <annotationEntry annotation="glance" class="ResinWidget" module="globals" symbol="getGlanceView"/>
+        <annotationEntry annotation="glance" class="ResinModel" module="globals" symbol="resinData"/>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="LauncherIcon"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="game_region_asia"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="appGlanceTitle"/>
+        <annotationEntry annotation="glance" class="ResinData" module="globals" symbol="initialize"/>
+        <annotationEntry annotation="glance" class="ResinDelegate" module="globals" symbol="initialize"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="time_left"/>
+        <annotationEntry annotation="glance" class="ResinModel" module="globals" symbol="onResponse"/>
+        <annotationEntry annotation="glance" class="ResinData" module="globals" symbol="remainingSeconds"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="AppName"/>
+        <annotationEntry annotation="glance" class="ResinGlanceView" module="globals" symbol="initialize"/>
+        <annotationEntry annotation="glance" class="ResinModel" module="globals" symbol="ltuid_v2"/>
+        <annotationEntry annotation="glance" class="ResinModel" module="globals" symbol="handleData"/>
+        <annotationEntry annotation="glance" class="ResinGlanceView" module="globals" symbol="onLayout"/>
+        <annotationEntry annotation="glance" class="ResinGlanceView" module="globals" symbol="onUpdate"/>
+        <annotationEntry annotation="glance" class="ResinDelegate" module="globals" symbol="onSelect"/>
+        <annotationEntry annotation="glance" class="ResinModel" module="globals" symbol="ltoken_v2"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="abbr_seconds"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="accGroupDesc"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="appTitle"/>
+        <annotationEntry annotation="glance" class="ResinWidget" module="globals" symbol="resinDelegate"/>
+        <annotationEntry annotation="glance" class="ResinWidget" module="globals" symbol="onStop"/>
+        <annotationEntry annotation="glance" class="ResinModel" module="globals" symbol="callback"/>
+        <annotationEntry annotation="glance" class="ResinDelegate" module="globals" symbol="resinModel"/>
+        <annotationEntry annotation="glance" class="ResinWidget" module="globals" symbol="resinView"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="game_uid"/>
+        <annotationEntry annotation="glance" class="ResinModel" module="globals" symbol="initialize"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="region"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="game_region_eu"/>
+        <annotationEntry annotation="glance" class="ResinWidget" module="globals" symbol="resinModel"/>
+        <annotationEntry annotation="glance" class="ResinGlanceView" module="globals" symbol="onShow"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="game_region_na"/>
+    </annotations>
+    <dataEntryOffsetMappings>
+        <dataEntry label="globals" offset="49" parentId="" symbolId="globals" type="module"/>
+        <dataEntry label="globals/ResinGlanceView" offset="152" parentId="globals" symbolId="ResinGlanceView" type="class"/>
+        <dataEntry label="globals/ResinWidget" offset="250" parentId="globals" symbolId="ResinWidget" type="class"/>
+        <dataEntry label="globals/ResinData" offset="384" parentId="globals" symbolId="ResinData" type="class"/>
+        <dataEntry label="globals/ResinModel" offset="473" parentId="globals" symbolId="ResinModel" type="class"/>
+        <dataEntry label="globals/ResinDelegate" offset="598" parentId="globals" symbolId="ResinDelegate" type="class"/>
+        <dataEntry label="globals/Rez" offset="1224" parentId="globals" symbolId="Rez" type="module"/>
+        <dataEntry label="globals/ResinView" offset="1268" parentId="globals" symbolId="ResinView" type="class"/>
+        <dataEntry label="globals/Rez/Drawables" offset="1411" parentId="Rez" symbolId="Drawables" type="module"/>
+        <dataEntry label="globals/Rez/Strings" offset="1482" parentId="Rez" symbolId="Strings" type="module"/>
+    </dataEntryOffsetMappings>
+    <functions>
+        <functionEntry accessMode="public" endPc="268435471" name="&lt;init&gt;" parent="ResinGlanceView" startPc="268435460">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435483" name="&lt;init&gt;" parent="ResinWidget" startPc="268435472">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="ResinData">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435580" name="&lt;init&gt;" parent="ResinModel" startPc="268435484">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435592" name="&lt;init&gt;" parent="ResinDelegate" startPc="268435581">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onShow" parent="ResinGlanceView">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435595" name="onLayout" parent="ResinGlanceView" startPc="268435593">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435610" name="initialize" parent="ResinGlanceView" startPc="268435596">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onHide" parent="ResinGlanceView">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435633" name="onReceive" parent="ResinGlanceView" startPc="268435611">
+            <param id="data"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435943" name="onUpdate" parent="ResinGlanceView" startPc="268435634">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435946" name="onStart" parent="ResinWidget" startPc="268435944">
+            <param id="state"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436177" name="onSettingsChanged" parent="ResinWidget" startPc="268435947">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436182" name="getGlanceTheme" parent="ResinWidget" startPc="268436178">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436315" name="getInitialView" parent="ResinWidget" startPc="268436183">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436330" name="initialize" parent="ResinWidget" startPc="268436316">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436455" name="getGlanceView" parent="ResinWidget" startPc="268436331">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436458" name="onStop" parent="ResinWidget" startPc="268436456">
+            <param id="state"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436856" name="getDuration" parent="ResinData" startPc="268436459">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436888" name="getString" parent="ResinData" startPc="268436857">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="initialize" parent="ResinData">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437009" name="onResponse" parent="ResinModel" startPc="268436889">
+            <param id="responseCode"/>
+            <param id="data"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437198" name="makeApiCall" parent="ResinModel" startPc="268437010">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437236" name="initialize" parent="ResinModel" startPc="268437199">
+            <param id="cb"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437392" name="handleData" parent="ResinModel" startPc="268437237">
+            <param id="data"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437420" name="initialize" parent="ResinDelegate" startPc="268437393">
+            <param id="model"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437436" name="onSelect" parent="ResinDelegate" startPc="268437421">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437457" name="getApp" startPc="268437437">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437477" name="&lt;init&gt;" parent="Rez" startPc="268437458">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437489" name="&lt;init&gt;" parent="ResinView" startPc="268437478">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Drawables">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Strings">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onShow" parent="ResinView">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437492" name="onLayout" parent="ResinView" startPc="268437490">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437672" name="drawRadial" parent="ResinView" startPc="268437493">
+            <param id="dc"/>
+            <param id="arcStart"/>
+            <param id="arcEnd"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437763" name="initialize" parent="ResinView" startPc="268437673">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onHide" parent="ResinView">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437786" name="onReceive" parent="ResinView" startPc="268437764">
+            <param id="data"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438102" name="onUpdate" parent="ResinView" startPc="268437787">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+    </functions>
+</debugInfo>

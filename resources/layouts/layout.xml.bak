@@ -1,0 +1,5 @@
+<layout id="MainLayout" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://developer.garmin.com/downloads/connect-iq/resources.xsd">
+    <bitmap id="resin_icon" filename="../drawables/resin_192_dark.png" x="center" y="15%" />
+    <label id="resin_count" x="center" y="62.5%" justification="Gfx.TEXT_JUSTIFY_CENTER" font="Gfx.FONT_MEDIUM" />
+    <label id="resin_time" x="center" y="75%" justification="Gfx.TEXT_JUSTIFY_CENTER" font="Gfx.FONT_XTINY" />
+</layout>
