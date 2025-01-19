@@ -63,7 +63,12 @@ class ResinGlanceView extends WatchUi.GlanceView {
     }
 
     function onReceive(data as ResinData) as Void {
-        resinData = data;
-        WatchUi.requestUpdate();
+        if (data instanceof ResinData) {
+            System.println("ResinGlanceView: Received data from ResinModel");
+            resinData = data;
+            WatchUi.requestUpdate();
+        } else {
+            System.println("ResinGlanceView: Received invalid data from ResinModel");
+        }
     }
 }

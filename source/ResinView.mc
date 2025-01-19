@@ -89,8 +89,13 @@ class ResinView extends WatchUi.View {
 
     // callback function for receiving resin data
     function onReceive(data) {
-        resinData = data;
-        WatchUi.requestUpdate();
+        if (data instanceof ResinData) {
+            System.println("ResinView: Received data from ResinModel");
+            resinData = data;
+            WatchUi.requestUpdate();
+        } else {
+            System.println("ResinView: Received invalid data from ResinModel");
+        }
     }
 
 }

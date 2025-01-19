@@ -97,12 +97,17 @@ class ResinModel {
       :headers => headers
     };
 
+    System.println("Querying API: " + URL);
+
     Communications.makeWebRequest(URL, params, options, method(:onResponse));
 
   }
 
   function onResponse(responseCode as Lang.Number, data as Lang.Dictionary) as Void {
+    System.println("Received code " + responseCode.toString() + " from API: ");
+
     if (responseCode == 200) {
+      System.println("Got internal status code " + data.get("retcode").toString());
       if (data.get("retcode") == 0) {
         handleData(data.get("data"));
       } else {
@@ -126,7 +131,7 @@ class ResinModel {
 
     callback.invoke(resinData);
 
-    //System.print(resinData.currentResin); System.print(resinData.maxResin); System.print(resinData.remainingSeconds);
+    System.println(Lang.format("Extracted data from API: $1$/$2$ $3$s", [resinData.currentResin, resinData.maxResin, resinData.remainingSeconds]));
   }
 
 }
