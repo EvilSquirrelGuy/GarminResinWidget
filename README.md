@@ -1,6 +1,6 @@
 # Garmin Resin Widget
 
-![Download on Garmin IQ Connect](https://img.shields.io/badge/Download_on-Garmin_IQ_Connect-blue?logo=garmin)
+[![Download on Garmin IQ Connect](https://img.shields.io/badge/Download_on-Garmin_IQ_Connect-blue?logo=garmin)](https://apps.garmin.com/apps/265aed1b-d72b-484b-8baf-c09b00e57f24?tid=0)
 [![Support me on Ko-Fi](https://img.shields.io/badge/Support_me-on_Ko--Fi-ff5e5b?logo=kofi)
 ](https://ko-fi.com/P5P5198VXT)
 
