@@ -11,7 +11,9 @@ A widget for Garmin watches that displays your Genshin Impact resin count!
 
 You can download the widget off the Garmin App Store at the link below:
 
-[Coming soon™️](#)
+[Download here!](https://apps.garmin.com/apps/265aed1b-d72b-484b-8baf-c09b00e57f24?tid=0)
+
+<sub>Due to Garmin restrictions, it's not available in the EEA yet, and I have no idea how long it'll take to get verified :(</sub>
 
 ## Supported Models
 
