@@ -41,7 +41,7 @@ In order to be able to access your Genshin data, this app needs your HoYoLAB aut
 your authentication tokens, since some of you have, no doubt, spent 100s or 1000s on this game ;)
 
 The token is only stored __on your device__, and is only sent to the **Official HoYoLAB API** endpoints. There are no middlemen, no catches,
-nothing! I wouldn't want my account data stolen either. You can review [source/ResinModel.ms](source/ResinModel.ts) to see exactly what happens
+nothing! I wouldn't want my account data stolen either. You can review [source/ResinModel.mc](source/ResinModel.mc) to see exactly what happens
 to the token with web requests.
 
 ## Licence
