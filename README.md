@@ -46,9 +46,16 @@ to the token with web requests.
 
 ## Licence
 
-This software is licensed under the GPLv3 with Commons Clause v1. This doesn't make it *truly* open-source, but rather
-source-available. Basically I don't want anyone just taking this, uploading the code without changing anything and charging
-money for it.
+This software is licensed under the EvilSquirrelGuy Protective Licence, since it's a non-standard licence, here's a little TL;DR of what you can and
+can't do with the software:
+
+- **Personal use only** – No commercial use allowed.  
+- **No patents** – You cannot file patents based on this software.  
+- **No unmodified binaries** – You cannot distribute binaries unless the source has been modified.  
+- **Modifications must be open** – If you share modified versions, you must provide full source code and a changelog.  
+- **Clear attribution required** – Must credit the original author in a visible and accessible location.  
+- **Licence must be included** – Any distributed source code or binaries must include or link to this licence.  
+- **No warranties** – The software is provided "as is" with no guarantees.  
 
 If you like the software enough to want to donate (idk why you'd feel like that, but ig some people like it), I have a Ko-Fi 
 page! (see the badge at the top of the page)
