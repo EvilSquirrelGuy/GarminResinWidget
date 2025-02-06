@@ -54,15 +54,22 @@ class ResinView extends WatchUi.View {
 
             dc.drawText(width/2, 0.75*height, Graphics.FONT_SYSTEM_XTINY, resinData.getDuration(), Graphics.TEXT_JUSTIFY_CENTER);
             
-            dc.setPenWidth(8);
+            dc.setPenWidth(3);
             dc.setColor(0x4463b7, Graphics.COLOR_TRANSPARENT);
 
-            drawRadial(dc, 0, (360*resinData.currentResin)/resinData.maxResin);
+            if (resinData.currentResin != 0) {
+                drawRadial(dc, 0, (360*resinData.currentResin)/resinData.maxResin, 16);
+            }
             
         } else {
             dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_TRANSPARENT);
 
             dc.drawText(width/2, 0.75*height, Graphics.FONT_SYSTEM_XTINY, "No data", Graphics.TEXT_JUSTIFY_CENTER);
+
+            dc.setPenWidth(3);
+            dc.setColor(0x4463b7, Graphics.COLOR_TRANSPARENT);
+
+            drawRadial(dc, 0, 200, 16);
         }
 
     }
@@ -73,7 +80,7 @@ class ResinView extends WatchUi.View {
     function onHide() as Void {
     }
 
-    function drawRadial(dc as Dc, arcStart, arcEnd) {
+    function drawRadial(dc as Dc, arcStart, arcEnd, inset) {
         /*
         Draw an arc.
             0 degrees: 3 o'clock position.
@@ -91,10 +98,10 @@ class ResinView extends WatchUi.View {
         arcStart = (90-arcStart) % 360;
         arcEnd = (90-arcEnd) % 360;
 
-        dc.drawArc(width/2, height/2, height/2, Graphics.ARC_CLOCKWISE, arcStart, arcEnd);
-        dc.drawArc((width/2)-1, height/2, height/2, Graphics.ARC_CLOCKWISE, arcStart, arcEnd);
-        dc.drawArc(width/2, (height/2)-1, height/2, Graphics.ARC_CLOCKWISE, arcStart, arcEnd);
-        dc.drawArc((width/2)-1, (height/2)-1, height/2, Graphics.ARC_CLOCKWISE, arcStart, arcEnd);
+        dc.drawArc(width/2, height/2, (height/2)-inset, Graphics.ARC_CLOCKWISE, arcStart, arcEnd);
+        dc.drawArc((width/2)-1, height/2, (height/2)-inset, Graphics.ARC_CLOCKWISE, arcStart, arcEnd);
+        dc.drawArc(width/2, (height/2)-1, (height/2)-inset, Graphics.ARC_CLOCKWISE, arcStart, arcEnd);
+        dc.drawArc((width/2)-1, (height/2)-1, (height/2)-inset, Graphics.ARC_CLOCKWISE, arcStart, arcEnd);
     }
 
     // callback function for receiving resin data
