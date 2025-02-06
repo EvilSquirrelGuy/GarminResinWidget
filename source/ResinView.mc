@@ -1,3 +1,13 @@
+/*
+ * Copyright (C) 2025- EvilSquirrelGuy. All rights reserved.
+ *
+ * Licensed under the EvilSquirrelGuy Protective Licence.
+ * Personal use and modifications allowed. Redistribution requires full source,
+ * a changelog, and clear attribution. No commercial use or patenting.
+ *
+ * Full licence terms: https://github.com/EvilSquirrelGuy/GarminResinWidget/blob/main/LICENSE.md
+ */
+
 import Toybox.Graphics;
 import Toybox.WatchUi;
 
@@ -44,7 +54,7 @@ class ResinView extends WatchUi.View {
 
             dc.drawText(width/2, 0.75*height, Graphics.FONT_SYSTEM_XTINY, resinData.getDuration(), Graphics.TEXT_JUSTIFY_CENTER);
             
-            dc.setPenWidth(6);
+            dc.setPenWidth(8);
             dc.setColor(0x4463b7, Graphics.COLOR_TRANSPARENT);
 
             drawRadial(dc, 0, (360*resinData.currentResin)/resinData.maxResin);
