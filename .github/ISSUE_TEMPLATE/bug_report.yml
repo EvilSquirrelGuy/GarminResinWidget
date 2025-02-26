@@ -1,0 +1,94 @@
+name: Bug Report
+description: >
+  Report something not functioning as expected or intended.
+title: "[Bug]: "
+labels: ["bug"]
+assignees:
+  - EvilSquirrelGuy
+body:
+- type: markdown
+  attributes:
+    value: >
+      Thank you for taking the time to fill out a bug report!
+- type: markdown
+  attributes:
+    value: "## System Info"
+- type: markdown
+  attributes:
+    value: |
+      First of all, tell me a bit about the hardware/software you're running the widget on.
+- type: input
+  id: version
+  attributes:
+    label: Widget Version
+    description: Which version of the widget are you using?
+    placeholder: e.g. v0.1.4, commit e69132a (if from source)
+  validations:
+    required: true
+- type: input
+  id: device
+  attributes:
+    label: Device
+    description: What Garmin device are you running the app on?
+    placeholder: e.g. vívoactive 5, Forerunner 265
+  validations:
+    required: true
+- type: input
+  id: device_os
+  attributes:
+    label: Device OS Version
+    description: What version of the OS (and API level) your device is running on.
+    placeholder: e.g. SW 12.12 - API 5.0.2
+  validations:
+    required: true
+- type: input
+  id: installed_from
+  attributes:
+    label: Installation Source
+    description: What app and device you used to install the app on your watch.
+    placeholder: e.g. Garmin Express on macOS, Connect IQ Store on Android
+  validations:
+    required: true
+- type: markdown
+  attributes:
+    value: "## Behaviour"
+- type: markdown
+  attributes:
+    value: |
+      Ok, now that we have the basic diagnostic info, tell me a bit about expected vs actual behaviours, and anything else you feel
+      would help squash the bug!
+- type: textarea
+  id: repro
+  attributes:
+    label: Reproduction steps
+    description: "How do you trigger this bug, give a step-by-step walkthrough."
+    value: |
+      1.
+      2.
+      3.
+      ...
+    render: markdown
+  validations:
+    required: true
+- type: textarea
+  id: expected
+  attributes:
+    label: Expected behaviour
+    description: "What do you think should be happening if the app was functioning correctly?"
+  validations:
+    required: true
+- type: textarea
+  id: actual
+  attributes:
+    label: Actual behaviour
+    description: "What actually happens?"
+  validations:
+    required: true
+- type: textarea
+  id: extra_info
+  attributes:
+    label: Extra information
+    description: "Anything else you'd like to add? This could be logfiles, screenshots, pictures..."
+  validations:
+    required: false
+
