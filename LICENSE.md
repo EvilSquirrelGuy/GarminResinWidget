@@ -24,16 +24,21 @@ You may not:
 - Any redistribution, whether of the original or modified Software, must include clear and prominent attribution to the original Licensor.
 - Attribution must be placed in a visible and accessible location, including but not limited to storefronts, marketplaces, websites, and any other distribution channels where the Software is made available.
 
-### 5. Disclaimer of Warranty
+### 5. Archival Storage
+- You may store the Software, including modified versions, for archival purposes, provided that the full source code is included and publicly available under the same terms.
+- Any archival storage must clearly indicate that it is for archival purposes and does not grant permission for commercial use or storefront distribution.
+- Attribution to the original Licensor must still be maintained in all archived versions.
+
+### 6. Disclaimer of Warranty
 The Software is provided "as is" without warranty of any kind, express or implied, including but not limited to warranties of merchantability or fitness for a particular purpose. The Licensor is not liable for any damages resulting from the use of the Software.
 
-### 6. Termination
+### 7. Termination
 The Licence is automatically terminated if You breach any term of this Agreement. Upon termination, You must cease all use of the Software and delete any copies in Your possession.
 
-### 7. Governing Law
+### 8. Governing Law
 This Agreement shall be governed by and construed in accordance with the laws of Scotland, without regard to conflict of law principles.
 
-### 8. Glossary
+### 9. Glossary
 - **Software**: The original code, scripts, or programs provided under this Agreement, including any updates or modifications made by the Licensor.
 - **Licensor**: The original author or entity granting this licence.
 - **You**: The individual or entity using the Software under the terms of this Agreement.
@@ -42,6 +47,7 @@ This Agreement shall be governed by and construed in accordance with the laws of
 - **Redistribution**: A form of distribution where the Software, whether modified or unmodified, is shared or republished by someone who is not the original Licensor, making it available to others.
 - **Attribution**: Proper credit given to the Licensor, which must be visibly displayed in any medium where the Software or its derivatives are shared or distributed.
 - **Changelog**: A documented record of all modifications made to the Software, including descriptions of changes and the identity of those who made them.
+- **Storefront**: Any online or physical platform where the Software or its derivatives are made available for access, download, or purchase. This includes, but is not limited to, websites, digital marketplaces, app stores, or physical retail locations where software products are sold, distributed, or offered for download.
 
 By using the Software, You acknowledge that You have read, understood, and agreed to be bound by this Agreement.
 
