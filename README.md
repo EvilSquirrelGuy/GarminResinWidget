@@ -1,8 +1,7 @@
 # Garmin Resin Widget
 
 [![Download on Garmin IQ Connect](https://img.shields.io/badge/Download_on-Garmin_IQ_Connect-blue?logo=garmin)](https://apps.garmin.com/apps/265aed1b-d72b-484b-8baf-c09b00e57f24?tid=0)
-[![Support me on Ko-Fi](https://img.shields.io/badge/Support_me-on_Ko--Fi-ff5e5b?logo=kofi)
-](https://ko-fi.com/P5P5198VXT)
+[![Support me on Ko-Fi](https://img.shields.io/badge/Support_me-on_Ko--Fi-ff5e5b?logo=kofi)](https://ko-fi.com/P5P5198VXT)
 
 
 A widget for Garmin watches that displays your Genshin Impact resin count!
@@ -13,13 +12,14 @@ You can download the widget off the Garmin App Store at the link below:
 
 [Download here!](https://apps.garmin.com/apps/265aed1b-d72b-484b-8baf-c09b00e57f24?tid=0)
 
-<sub>Due to Garmin restrictions, it's not available in the EEA yet, and I have no idea how long it'll take to get verified :(</sub>
+*Now available in the EU/EEA! 🎉*
 
 ## Supported Models
 
 * vívoactive 5
-* Forerunner 265
-* Forerunner 265S
+* Forerunner 265/265S
+* Venu 2/2+/2S
+* Venu 3/3S
 
 ## Setup
 
@@ -43,6 +43,15 @@ your authentication tokens, since some of you have, no doubt, spent 100s or 1000
 The token is only stored __on your device__, and is only sent to the **Official HoYoLAB API** endpoints. There are no middlemen, no catches,
 nothing! I wouldn't want my account data stolen either. You can review [source/ResinModel.mc](source/ResinModel.mc) to see exactly what happens
 to the token with web requests.
+
+## Contributing
+
+As this is just a small hobby project of mine, I'm not really looking for help in the core functionality (unless you happen to
+be able to solve a bug faster than I can). The main ways you can help are by creating bug reports, feature requests, and (when
+the time comes) translations!
+
+Also if you really like the project, consider starring it on GitHub, or writing a quick review on the Garmin Connect IQ store
+so more people can access their resin count from their wrist!
 
 ## Licence
 
