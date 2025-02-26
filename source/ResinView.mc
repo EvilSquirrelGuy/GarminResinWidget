@@ -49,7 +49,9 @@ class ResinView extends WatchUi.View {
         dc.drawBitmap((width-192)/2, height*0.1, resinIcon);
 
         if (resinData != null) {
-
+            // getting data from the server was a success!
+            // now draw the radial and display info
+            
             dc.drawText(width/2, (0.1*height + 192 + 8), Graphics.FONT_SYSTEM_MEDIUM, resinData.getString(), Graphics.TEXT_JUSTIFY_CENTER);
 
             dc.drawText(width/2, 0.75*height, Graphics.FONT_SYSTEM_XTINY, resinData.getDuration(), Graphics.TEXT_JUSTIFY_CENTER);
@@ -57,19 +59,13 @@ class ResinView extends WatchUi.View {
             dc.setPenWidth(3);
             dc.setColor(0x4463b7, Graphics.COLOR_TRANSPARENT);
 
-            if (resinData.currentResin != 0) {
+            if (resinData.currentResin > 0) {
                 drawRadial(dc, 0, (360*resinData.currentResin)/resinData.maxResin, 16);
             }
             
         } else {
-            dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_TRANSPARENT);
-
+            // unable to contact the server, so we let the user know
             dc.drawText(width/2, 0.75*height, Graphics.FONT_SYSTEM_XTINY, "No data", Graphics.TEXT_JUSTIFY_CENTER);
-
-            dc.setPenWidth(3);
-            dc.setColor(0x4463b7, Graphics.COLOR_TRANSPARENT);
-
-            drawRadial(dc, 0, 200, 16);
         }
 
     }
