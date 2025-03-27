@@ -139,7 +139,9 @@ class ResinModel {
   }
 
   function invalidateCache() {
-    // invalidate the cache
+    // remove our cached version of the resinData
+    resinData = null;
+    // invalidate the cache so we don't read from storage
     Storage.setValue("lastCacheTime", -1);
     // call update method
     updateResinData();
@@ -185,13 +187,16 @@ class ResinModel {
     if (lastCached == null) {
       // assume that if this is null, then the other values aren't set
       System.println("Error: no cached data found!");
+      resinData = null;
       return;
     } else if (lastCached == -1) {
       System.println("Error: cache was manually invalidated");
+      resinData = null;
       return;
     } else if (currTime - lastCached > 1.5 * maxResin * ResinData.TIME_PER_RESIN) {
       // if the data hasn't been updated in 1,5x resin cycles we give up, since it's very unlikely to be accurate
       System.println("Error: cached data is too old!");
+      resinData = null;
       return;
     }
 
