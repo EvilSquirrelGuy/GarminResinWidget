@@ -21,6 +21,14 @@ You can download the widget off the Garmin App Store at the link below:
 * Venu 2/2+/2S
 * Venu 3/3S
 
+## Usage
+
+After setting up, you can refresh the data by tapping the screen (or start/stop button), or invalidate the cache by holding the screen. Currently I don't have a good way of figuring out a perfect system for non-touchscreen devices, but I'm sure I'll get there one day!
+
+Warning! – After invalidating the cache, you will *not be able to* see any resin data until the watch is able to connect to the internet again! Don't do it when you're offline :)
+
+You can configure the cache retention duration in advanced settings.
+
 ## Setup
 
 This widget directly queries the HoYoLAB API, so you'll need to grab the following things:
