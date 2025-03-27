@@ -47,7 +47,7 @@ class ResinWidget extends Application.AppBase {
 
         Properties.setValue("region", region);
 
-        resinModel.makeApiCall();
+        resinModel.updateResinData();
     }
 
     // Return the initial view of your application here

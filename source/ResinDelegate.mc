@@ -22,7 +22,7 @@ class ResinDelegate extends WatchUi.BehaviorDelegate {
 
   function onSelect() {
     // update data
-    resinModel.makeApiCall();
+    resinModel.updateResinData();
     return true;
   }
 }

@@ -13,13 +13,13 @@ using Toybox.Application.Properties as Properties;
 using Toybox.Application.Storage as Storage;
 using Toybox.Lang;
 using Toybox.Time;
+using Toybox.Math as Maths;
 
 (:glance)
 class ResinData {
   var currentResin;  // current_resin
   var maxResin;  // max_resin
   var remainingSeconds;  // resin_recovery_time
-  const TIME_PER_RESIN = 8 * Time.Gregorian.SECONDS_PER_MINUTE; // 8 minutes per resin
 
   function getString() as Lang.String {
     return currentResin.toString() + "/" + maxResin.toString();
@@ -65,6 +65,7 @@ class ResinModel {
    */
 
   const URL = "https://bbs-api-os.hoyolab.com/game_record/genshin/api/dailyNote";
+  const TIME_PER_RESIN = 8 * Time.Gregorian.SECONDS_PER_MINUTE; // 8 minutes per resin
 
   const ltoken_v2 = Properties.getValue("ltoken_v2");
   const ltuid_v2 = Properties.getValue("ltuid_v2");
@@ -79,14 +80,22 @@ class ResinModel {
     System.println("Initialising ResinModel...");
     callback = cb;
 
-    var lastCacheTime = Time.Moment(Storage.getValue("lastCacheTime"));
+    updateResinData();
+    
+  }
+
+  function updateResinData() {
+    // updates the resin data
+
+    // get last cache time
+    var lastCacheTime = Storage.getValue("lastCacheTime");
 
     // get difference
-    var diff = abs(lastCacheTime.compare(Time.Moment(Time.today().value())));
+    var diff = Time.today().value() - lastCacheTime; // diff in seconds
 
     // check if resin data is still stored
     if (resinData != null) {
-      callback(resinData);
+      callback.invoke(resinData);
 
     // if we last cached 2h+ ago, load the data from cache, otherwise, fetch it from API again
     } else if (diff > 2 * Time.Gregorian.SECONDS_PER_HOUR) {
@@ -94,30 +103,28 @@ class ResinModel {
     } else {
       generateResinData();
     }
-
   }
 
   function generateResinData() {
     System.println("Generating resin data from cache...");
     // generate resin data from cached values
-    const fullTime = Storage.getValue("resinFullTimestamp");
-    const maxResin = Storage.getValue("maxResin");
+    var fullTime = Storage.getValue("resinFullTimestamp");
+    var maxResin = Storage.getValue("maxResin");
     // time stuff
-    const lastCached = Storage.getValue("lastCacheTime");
-    const currTime = Time.today().value();
+    var lastCached = Storage.getValue("lastCacheTime");
+    var currTime = Time.today().value();
 
-    if (lastCacheTime == null) {
+    if (lastCached == null) {
       // assume that if this is null, then the other values aren't set
       System.println("Error: no cached data found!");
-    } else if (lastCacheTime == -1) {
+    } else if (lastCached == -1) {
       System.println("Error: cache was manually invalidated");
-    }
     } else if (currTime - lastCached > 1.5 * maxResin * TIME_PER_RESIN) {
       // if the data hasn't been updated in 1,5x resin cycles we give up, since it's very unlikely to be accurate
       System.println("Error: cached data is too old!");
     }
 
-    const remainingTime = currTime - fullTime;
+    var remainingTime = currTime - fullTime;
     var currResin = 0; // init to 0
 
     if (remainingTime <= 0) { // it's full already
@@ -137,7 +144,7 @@ class ResinModel {
        *
        * And as we all know, that condenses down into a single line of code!
        */
-      currResin = maxResin - floor(remainingTime/TIME_PER_RESIN);
+      currResin = maxResin - Maths.floor(remainingTime/TIME_PER_RESIN);
     }
 
     resinData = new ResinData();
@@ -147,7 +154,7 @@ class ResinModel {
 
     System.println(Lang.format("Calculated cached data: $1$; $2$; $3$s", [resinData.currentResin, resinData.maxResin, resinData.remainingSeconds]));
 
-    callback(resinData);
+    callback.invoke(resinData);
   }
 
   function fetchResinData() {
@@ -157,7 +164,10 @@ class ResinModel {
       return;
     }
     // censor uid and log that data was read from config, should give format: 74*****07
-    var censored_uid = UID.toString().substring(0, 2) + UID.toString().length()-4 + UID.toString().substring(-2,null);
+    var uid_string = UID.toString();
+    var censored_uid = uid_string.substring(0, 2)
+      + (uid_string.length() == 9 ? "*****" : "******")
+      + uid_string.substring(-2,null);
 
     // log data that we have
     System.println("Using stored account data: game_uid=" + censored_uid + "; region=" + region);
@@ -168,17 +178,16 @@ class ResinModel {
       "role_id" => UID
     };
 
+
     // censor the cookies and log that we have them
+    var censored_ltoken_v2 = "unset";
     if (ltoken_v2.length != 0) {
-      var censored_ltoken_v2 = ltoken_v2.substring(0,1) + "*****" + ltoken_v2.substring(-1,null);
-    } else {
-      var censored_ltoken_v2 = "unset";
+      censored_ltoken_v2 = ltoken_v2.substring(0,1) + "*****" + ltoken_v2.substring(-1,null);
     }
 
+    var censored_ltuid_v2 = "unset";
     if (ltuid_v2 != 0) {
-      var censored_ltuid_v2 = ltuid_v2.toString().substring(0,1) + "*****" + ltuid_v2.toString().substring(-1,null);
-    } else {
-      var censored_ltuid_v2 = "unset";
+      censored_ltuid_v2 = ltuid_v2.toString().substring(0,1) + "*****" + ltuid_v2.toString().substring(-1,null);
     }
     // log bit
     System.println("Using cookies: ltoken_v2=" + censored_ltoken_v2 + "; ltuid_v2=" + censored_ltuid_v2);
@@ -220,7 +229,7 @@ class ResinModel {
     }
 
     // attempt to generate resin data from cached values
-    System.out("Attempting to recover - trying cached data...");
+    System.println("Attempting to recover - trying cached data...");
     generateResinData();
   }
 
@@ -239,9 +248,9 @@ class ResinModel {
     System.println(Lang.format("Received data from API: $1$; $2$; $3$s", [resinData.currentResin, resinData.maxResin, resinData.remainingSeconds]));
 
     // cache data to persistent storage
-    Storage.setValue("resinFullTimestamp", Time.Moment(Time.today().value()) + resinData.remainingSeconds);
-    Storage.setValue("maxResin", resinData.maxResin)
+    Storage.setValue("resinFullTimestamp", Time.today().value() + resinData.remainingSeconds);
+    Storage.setValue("maxResin", resinData.maxResin);
     // set cache time to now so we can invalidate it after some amount of time
-    Storage.setValue("lastCacheTime", Time.Moment(Time.today().value()));
+    Storage.setValue("lastCacheTime", Time.today().value());
   }
 }
