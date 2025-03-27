@@ -134,9 +134,15 @@ class ResinModel {
   function initialize(cb) {
     System.println("Initialising ResinModel...");
     callback = cb;
-
+    // update the resin data
     updateResinData();
-    
+  }
+
+  function invalidateCache() {
+    // invalidate the cache
+    Storage.setValue("lastCacheTime", -1);
+    // call update method
+    updateResinData();
   }
 
   function updateResinData() {
@@ -145,9 +151,12 @@ class ResinModel {
     // get last cache time
     var lastCacheTime = Storage.getValue("lastCacheTime");
 
+    // get the cache invalidation period
+    var cacheRetention = Properties.getValue("cache_retention") * Time.Gregorian.SECONDS_PER_MINUTE;
+
     // get difference
     var diff = -1;
-    if (lastCacheTime != null) {
+    if (lastCacheTime != null && lastCacheTime != -1) {
       diff = Time.now().value() - lastCacheTime; // diff in seconds
     }
 
@@ -157,7 +166,7 @@ class ResinModel {
       callback.invoke(resinData);
 
     // if we last cached 2h+ ago, load the data from cache, otherwise, fetch it from API again
-    } else if (diff > 2 * Time.Gregorian.SECONDS_PER_HOUR || diff == -1) {
+    } else if (diff > cacheRetention || diff == -1) {
       fetchResinData();
     } else {
       generateResinData();

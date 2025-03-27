@@ -17,4 +17,10 @@
             <settingConfig type="alphanumeric" readonly="true" />
         </setting>
     </group>
+    <group id="advancedGroup" title="@Strings.advancedGroup" description="@Strings.advancedGroupDesc">
+        <setting propertyKey="@Properties.cache_retention" title="@Strings.cache_retention">
+            <!--5mins - 4h -->
+            <settingConfig type="numeric" min="5" max="240" />
+        </setting>
+    </group>
 </settings>

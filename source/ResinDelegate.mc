@@ -25,4 +25,12 @@ class ResinDelegate extends WatchUi.BehaviorDelegate {
     resinModel.updateResinData();
     return true;
   }
+
+  function onKey(keyEvent) {
+    // pressing menu invalidates the cache and forces an api refresh
+    if (keyEvent.getKey() == WatchUi.KEY_MENU) { //} && keyEvent.getType() == WatchUi.CLICK_TYPE_HOLD) {
+      resinModel.invalidateCache();
+    }
+    return true;
+  }
 }

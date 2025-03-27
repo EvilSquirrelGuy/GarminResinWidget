@@ -9,12 +9,17 @@
 
     <string id="accGroup">Account</string>
     <string id="accGroupDesc">Put your account info here in order to load the correct profile</string>
+
+    <string id="advancedGroup">Advanced</string>
+    <string id="advancedGroupDesc">Advanced configuration options. Be careful – these options may cause unintended behaviour</string>
     
     <string id="ltoken_v2_cookie">ltoken_v2 Cookie</string>
     <string id="ltuid_v2_cookie">ltuid_v2 Cookie</string>
 
     <string id="game_uid">Genshin UID</string>
     <string id="region">Account Region</string>
+
+    <string id="cache_retention">Cache Retention Duration (minutes)</string>
 
     <string id="game_region_na">America</string>
     <string id="game_region_eu">Europe</string>
