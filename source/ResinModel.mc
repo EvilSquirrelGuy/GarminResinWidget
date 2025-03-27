@@ -20,9 +20,14 @@ class ResinData {
   // constant value
   static var TIME_PER_RESIN = 8 * Time.Gregorian.SECONDS_PER_MINUTE; // 8 minutes per resin
 
-  // var currentResin;  // current_resin
+  var createdTime;  // createdTime
   var maxResin;  // max_resin
   var fullTime;  // now + resin_recovery_time
+  
+  function initialize() {
+    // set createdTime
+    createdTime = Time.now().value();
+  }
 
   function getString() as Lang.String {
     return getCurrentResin().toString() + "/" + maxResin.toString();
@@ -163,7 +168,8 @@ class ResinModel {
     }
 
     // check if resin data is still stored
-    if (resinData != null) {
+    // only rely on memory data for max 60s
+    if (resinData != null && Time.now().value() - resinData.createdTime < 60) {
       System.println(Lang.format("Used in-memory data: $1$; $2$; $3$s", [resinData.getCurrentResin(), resinData.maxResin, resinData.getRemainingSeconds()]));
       callback.invoke(resinData);
 
