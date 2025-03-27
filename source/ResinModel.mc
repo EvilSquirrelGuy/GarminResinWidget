@@ -91,14 +91,17 @@ class ResinModel {
     var lastCacheTime = Storage.getValue("lastCacheTime");
 
     // get difference
-    var diff = Time.today().value() - lastCacheTime; // diff in seconds
+    var diff = -1;
+    if (lastCacheTime != null) {
+      diff = Time.today().value() - lastCacheTime; // diff in seconds
+    }
 
     // check if resin data is still stored
     if (resinData != null) {
       callback.invoke(resinData);
 
     // if we last cached 2h+ ago, load the data from cache, otherwise, fetch it from API again
-    } else if (diff > 2 * Time.Gregorian.SECONDS_PER_HOUR) {
+    } else if (diff > 2 * Time.Gregorian.SECONDS_PER_HOUR || diff == -1) {
       fetchResinData();
     } else {
       generateResinData();
@@ -165,12 +168,15 @@ class ResinModel {
     }
     // censor uid and log that data was read from config, should give format: 74*****07
     var uid_string = UID.toString();
-    var censored_uid = uid_string.substring(0, 2)
+    var censored_uid = "unset";
+    if (UID != 0 && UID != null) {
+    censored_uid = uid_string.substring(0, 2)
       + (uid_string.length() == 9 ? "*****" : "******")
       + uid_string.substring(-2,null);
+    }
 
     // log data that we have
-    System.println("Using stored account data: game_uid=" + censored_uid + "; region=" + region);
+    System.println("Using stored account data: game_uid=" + censored_uid + "; region=" + (region == null ? "unset" : region));
 
     // url paramters
     var params = {
@@ -181,7 +187,7 @@ class ResinModel {
 
     // censor the cookies and log that we have them
     var censored_ltoken_v2 = "unset";
-    if (ltoken_v2.length != 0) {
+    if (ltoken_v2.length() != 0 || ltoken_v2 != null) {
       censored_ltoken_v2 = ltoken_v2.substring(0,1) + "*****" + ltoken_v2.substring(-1,null);
     }
 
