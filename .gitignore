@@ -2,7 +2,7 @@
 .bak
 .good
 
-resources/settings/properties.xml
+/resources/settings/properties.xml
 
 # useless
 .DS_Store
