@@ -59,8 +59,8 @@ class ResinView extends WatchUi.View {
             dc.setPenWidth(3);
             dc.setColor(0x4463b7, Graphics.COLOR_TRANSPARENT);
 
-            if (resinData.currentResin > 0) {
-                drawRadial(dc, 0, (360*resinData.currentResin)/resinData.maxResin, 16);
+            if (resinData.getCurrentResin() > 0) {
+                drawRadial(dc, 0, (360*resinData.getCurrentResin())/resinData.maxResin, 16);
             }
             
         } else {

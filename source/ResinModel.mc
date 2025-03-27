@@ -17,15 +17,71 @@ using Toybox.Math as Maths;
 
 (:glance)
 class ResinData {
-  var currentResin;  // current_resin
+  // constant value
+  static var TIME_PER_RESIN = 8 * Time.Gregorian.SECONDS_PER_MINUTE; // 8 minutes per resin
+
+  // var currentResin;  // current_resin
   var maxResin;  // max_resin
-  var remainingSeconds;  // resin_recovery_time
+  var fullTime;  // now + resin_recovery_time
 
   function getString() as Lang.String {
-    return currentResin.toString() + "/" + maxResin.toString();
+    return getCurrentResin().toString() + "/" + maxResin.toString();
+  }
+
+  function getRemainingSeconds() {
+    // get the remaining seconds
+    var remainingSeconds = 0;
+
+    // if fullTime isn't set to 0, calculate difference
+    if (fullTime > 0) {
+      remainingSeconds = fullTime - Time.now().value();
+    }
+
+    // if we calculate as 0, it's full so we don't care
+    if (remainingSeconds <= 0) {
+      remainingSeconds = 0;
+    }
+
+    return remainingSeconds;
+  }
+
+  function setFullTimeOffset(offset) {
+    if (offset != 0) {
+      fullTime = Time.now().value() + offset;
+    } else { // it's full, discard
+      fullTime = 0;
+    }
+  }
+
+  function getCurrentResin() {
+    var remainingTime = getRemainingSeconds();
+    var currResin = 0;
+
+    if (remainingTime <= 0) { // it's full already
+      currResin = maxResin;
+    } else {
+      // calculate current resin
+      // i wrote this on 5h of sleep and ungodly amounts of caffeine so the logic might be flawed... oops?
+      /*
+       * I feel like i need to explain what's going on here or I'll forget so:
+       *  (assuming max resin = 200, time per resin = 480s, or 8min)
+       * 
+       *    If there's 20s left until full, that means we have 199 resin, and 200 in 20s.
+       *      Therefore, we floor the result, as we have the same amout of resin as we had time remaining was 480s.
+       *    Now extrapolate that to, for example 3600s left. 3600s = 7,5 resin, or rather: 200-7,5 = 192,5. However since
+       *    we can't have fractional resin, and it's not generated 193 resin yet, we simply floor the result to get our
+       *    current resin count! 
+       *
+       * And as we all know, that condenses down into a single line of code!
+       */
+      currResin = maxResin - Maths.floor(remainingTime/TIME_PER_RESIN).toNumber();
+    }
+    return currResin;
   }
 
   function getDuration() as Lang.String {
+    var remainingSeconds = getRemainingSeconds();
+
     var abbrDays = WatchUi.loadResource(Rez.Strings.abbr_days);
     var abbrHours = WatchUi.loadResource(Rez.Strings.abbr_hours);
     var abbrMins = WatchUi.loadResource(Rez.Strings.abbr_minutes);
@@ -38,15 +94,15 @@ class ResinData {
 
     var durationString = "";
 
-    if (remainingSeconds > 24*60*60) {
+    if (remainingSeconds > Time.Gregorian.SECONDS_PER_DAY) {
       durationString += (remainingSeconds/(24*60*60)).toNumber().toString() + abbrDays + " ";
     }
 
-    if (remainingSeconds > 60*60) {
+    if (remainingSeconds > Time.Gregorian.SECONDS_PER_HOUR) {
       durationString += (remainingSeconds%(24*60*60)/(60*60)).toNumber().toString() + abbrHours + " ";
     }
 
-    if (remainingSeconds > 60) {
+    if (remainingSeconds > Time.Gregorian.SECONDS_PER_MINUTE) {
       durationString += (remainingSeconds%(60*60)/(60)).toNumber().toString() + abbrMins + " ";
     }
 
@@ -65,7 +121,6 @@ class ResinModel {
    */
 
   const URL = "https://bbs-api-os.hoyolab.com/game_record/genshin/api/dailyNote";
-  const TIME_PER_RESIN = 8 * Time.Gregorian.SECONDS_PER_MINUTE; // 8 minutes per resin
 
   const ltoken_v2 = Properties.getValue("ltoken_v2");
   const ltuid_v2 = Properties.getValue("ltuid_v2");
@@ -93,11 +148,12 @@ class ResinModel {
     // get difference
     var diff = -1;
     if (lastCacheTime != null) {
-      diff = Time.today().value() - lastCacheTime; // diff in seconds
+      diff = Time.now().value() - lastCacheTime; // diff in seconds
     }
 
     // check if resin data is still stored
     if (resinData != null) {
+      System.println(Lang.format("Used in-memory data: $1$; $2$; $3$s", [resinData.getCurrentResin(), resinData.maxResin, resinData.getRemainingSeconds()]));
       callback.invoke(resinData);
 
     // if we last cached 2h+ ago, load the data from cache, otherwise, fetch it from API again
@@ -115,47 +171,30 @@ class ResinModel {
     var maxResin = Storage.getValue("maxResin");
     // time stuff
     var lastCached = Storage.getValue("lastCacheTime");
-    var currTime = Time.today().value();
+    var currTime = Time.now().value();
 
     if (lastCached == null) {
       // assume that if this is null, then the other values aren't set
       System.println("Error: no cached data found!");
+      return;
     } else if (lastCached == -1) {
       System.println("Error: cache was manually invalidated");
-    } else if (currTime - lastCached > 1.5 * maxResin * TIME_PER_RESIN) {
+      return;
+    } else if (currTime - lastCached > 1.5 * maxResin * ResinData.TIME_PER_RESIN) {
       // if the data hasn't been updated in 1,5x resin cycles we give up, since it's very unlikely to be accurate
       System.println("Error: cached data is too old!");
+      return;
     }
 
-    var remainingTime = currTime - fullTime;
-    var currResin = 0; // init to 0
-
-    if (remainingTime <= 0) { // it's full already
-      currResin = maxResin;
-    } else {
-      // calculate current resin
-      // i wrote this on 5h of sleep and ungodly amounts of caffeine so the logic might be flawed... oops?
-      /*
-       * I feel like i need to explain what's going on here or I'll forget so:
-       *  (assuming max resin = 200, time per resin = 480s, or 8min)
-       * 
-       *    If there's 20s left until full, that means we have 199 resin, and 200 in 20s.
-       *      Therefore, we floor the result, as we have the same amout of resin as we had time remaining was 480s.
-       *    Now extrapolate that to, for example 3600s left. 3600s = 7,5 resin, or rather: 200-7,5 = 192,5. However since
-       *    we can't have fractional resin, and it's not generated 193 resin yet, we simply floor the result to get our
-       *    current resin count! 
-       *
-       * And as we all know, that condenses down into a single line of code!
-       */
-      currResin = maxResin - Maths.floor(remainingTime/TIME_PER_RESIN);
-    }
+    // var remainingTime = fullTime - currTime;
+    // var currResin = 0; // init to 0
 
     resinData = new ResinData();
-    resinData.currentResin = currResin;
+    // resinData.currentResin = currResin;
     resinData.maxResin = maxResin;
-    resinData.remainingSeconds = remainingTime;
+    resinData.fullTime = fullTime;
 
-    System.println(Lang.format("Calculated cached data: $1$; $2$; $3$s", [resinData.currentResin, resinData.maxResin, resinData.remainingSeconds]));
+    System.println(Lang.format("Calculated cached data: $1$; $2$; $3$s", [resinData.getCurrentResin(), resinData.maxResin, resinData.getRemainingSeconds()]));
 
     callback.invoke(resinData);
   }
@@ -187,13 +226,13 @@ class ResinModel {
 
     // censor the cookies and log that we have them
     var censored_ltoken_v2 = "unset";
-    if (ltoken_v2.length() != 0 || ltoken_v2 != null) {
-      censored_ltoken_v2 = ltoken_v2.substring(0,1) + "*****" + ltoken_v2.substring(-1,null);
+    if (ltoken_v2.length() != 0 && ltoken_v2 != null) {
+      censored_ltoken_v2 = ltoken_v2.substring(0,2) + "***...***" + ltoken_v2.substring(-2,null);
     }
 
     var censored_ltuid_v2 = "unset";
     if (ltuid_v2 != 0) {
-      censored_ltuid_v2 = ltuid_v2.toString().substring(0,1) + "*****" + ltuid_v2.toString().substring(-1,null);
+      censored_ltuid_v2 = ltuid_v2.toString().substring(0,2) + "*****" + ltuid_v2.toString().substring(-2,null);
     }
     // log bit
     System.println("Using cookies: ltoken_v2=" + censored_ltoken_v2 + "; ltuid_v2=" + censored_ltuid_v2);
@@ -245,18 +284,18 @@ class ResinModel {
     // this only runs if we didn't load data from memory
     resinData = new ResinData();
 
-    resinData.currentResin = data.get("current_resin").toNumber();
+    // resinData.currentResin = data.get("current_resin").toNumber(); // technically we don't need this field
     resinData.maxResin = data.get("max_resin").toNumber();
-    resinData.remainingSeconds = data.get("resin_recovery_time").toNumber();
+    resinData.setFullTimeOffset(data.get("resin_recovery_time").toNumber());
 
     callback.invoke(resinData);
 
-    System.println(Lang.format("Received data from API: $1$; $2$; $3$s", [resinData.currentResin, resinData.maxResin, resinData.remainingSeconds]));
+    System.println(Lang.format("Received data from API: $1$; $2$; $3$s", [resinData.getCurrentResin(), resinData.maxResin, resinData.getRemainingSeconds()]));
 
     // cache data to persistent storage
-    Storage.setValue("resinFullTimestamp", Time.today().value() + resinData.remainingSeconds);
+    Storage.setValue("resinFullTimestamp", resinData.fullTime);
     Storage.setValue("maxResin", resinData.maxResin);
     // set cache time to now so we can invalidate it after some amount of time
-    Storage.setValue("lastCacheTime", Time.today().value());
+    Storage.setValue("lastCacheTime", Time.now().value());
   }
 }

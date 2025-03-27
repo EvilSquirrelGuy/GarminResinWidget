@@ -50,14 +50,14 @@ class ResinGlanceView extends WatchUi.GlanceView {
             // reset colours
             dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
             // resin count
-            dc.drawText(0, (height-16)-offset, Graphics.FONT_GLANCE_NUMBER, resinData.currentResin.toString(), Graphics.TEXT_JUSTIFY_LEFT);
+            dc.drawText(0, (height-16)-offset, Graphics.FONT_GLANCE_NUMBER, resinData.getCurrentResin().toString(), Graphics.TEXT_JUSTIFY_LEFT);
             // max resin
             dc.drawText(width, (height-16)-offset, Graphics.FONT_GLANCE_NUMBER, resinData.maxResin.toString(), Graphics.TEXT_JUSTIFY_RIGHT);
 
             // colour in progress bar (with a random colour i colour picked from resin)
             dc.setColor(0x4463b7, Graphics.COLOR_TRANSPARENT);
 
-            var pbarWidth = (resinData.currentResin * width) / resinData.maxResin;
+            var pbarWidth = (resinData.getCurrentResin() * width) / resinData.maxResin;
             //System.println(Lang.format("$1$/$2$ $3$", [resinData.currentResin, resinData.maxResin, pbarWidth]));
 
             dc.fillRectangle(0, height/2, pbarWidth, 8);
