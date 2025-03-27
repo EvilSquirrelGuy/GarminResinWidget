@@ -2,8 +2,6 @@
 .bak
 .good
 
-/resources/settings/properties.xml
-
 # useless
 .DS_Store
 
@@ -14,3 +12,4 @@ export/
 
 .prg
 .SET
+resources/settings/properties.xml.bak
