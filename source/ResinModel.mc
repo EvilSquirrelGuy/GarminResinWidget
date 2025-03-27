@@ -79,7 +79,8 @@ class ResinData {
        *
        * And as we all know, that condenses down into a single line of code!
        */
-      currResin = maxResin - Maths.floor(remainingTime/TIME_PER_RESIN).toNumber();
+      // convert to float cuz otherwise it truncates, and we get inaccurate resin count
+      currResin = Maths.floor(maxResin.toFloat() - (remainingTime.toFloat()/TIME_PER_RESIN.toFloat())).toNumber();
     }
     return currResin;
   }
