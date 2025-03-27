@@ -5,7 +5,7 @@
  * Personal use and modifications allowed. Redistribution requires full source,
  * a changelog, and clear attribution. No commercial use or patenting.
  *
- * Full licence terms: https://github.com/EvilSquirrelGuy/GarminResinWidget/blob/main/LICENSE.md
+ * Full licence terms: https://github.com/EvilSquirrelGuy/GarminResinWidget/blob/main/LICENCE.md
  */
 
 using Toybox.Communications;
