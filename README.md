@@ -23,7 +23,11 @@ You can download the widget off the Garmin App Store at the link below:
 
 ## Usage
 
-After setting up, you can refresh the data by tapping the screen (or start/stop button), or invalidate the cache by holding the screen. Currently I don't have a good way of figuring out a perfect system for non-touchscreen devices, but I'm sure I'll get there one day!
+After setting up, you can refresh the data by tapping the screen (or start/stop button).
+
+You can also force an online refresh (cache invalidation) by either pressing and holding the screen, or holding the back button.
+
+Due to limited testing ability, the above may not work for all models.
 
 Warning! – After invalidating the cache, you will *not be able to* see any resin data until the watch is able to connect to the internet again! Don't do it when you're offline :)
 
@@ -41,7 +45,7 @@ Once you have these, you can configure them in the Garmin Connect IQ App (you'll
 from the Garmin App Store for this. Yes, setting it to beta does work, don't worry.) Cookies go in the "Authentication"
 group, and your UID goes into "Account".
 
-Make sure to spam the save button a few times since saving the configuration is a bit buggy (at least in my experience).
+The resin should update as soon as you save the config now. The previous behaviour was caused by a bug where updating the config wouldn't actually be reflected in the object responsible for querying resin data, this is fixed in v0.2.1.
 
 ## Security & Privacy
 
@@ -51,6 +55,33 @@ your authentication tokens, since some of you have, no doubt, spent 100s or 1000
 The token is only stored __on your device__, and is only sent to the **Official HoYoLAB API** endpoints. There are no middlemen, no catches,
 nothing! I wouldn't want my account data stolen either. You can review [source/ResinModel.mc](source/ResinModel.mc) to see exactly what happens
 to the token with web requests.
+
+## Bug Reporting
+
+If you encounter a bug in the app, please follow these steps:
+
+1. Ensure that you're running on the latest version of the app.
+
+2. Ensure that you're able to reproduce the bug on this version.
+
+3. Open an bug report on the GitHub bug tracker (can be found by clicking "Source code").
+
+You can also use the GitHub for any feature requests you may have for the app!
+
+## FAQ & Known Issues
+
+The timer doesn't update itself every second!
+> *I tried to fix this in v0.2.0, but implementing this might require some major internal structure changes.*
+
+I've entered my account details but the resin counter is still showing No Data!
+> *This was fixed in v0.2.1 – update the app. If you're still getting it in the latest version, make sure all your account details are entered correctly without any spaces! If it still doesn't work, please open an issue on the bug tracker.*
+
+The widget suddenly stopped displaying my resin count!
+> *This is likely intentional. Make sure your watch has internet access and try again! The widget will stop displaying data if it's been unable to get data from the HoYoLAB API for over 39 hours (1,5x resin refill time). This can also happen if you manually invalidate the cache.*
+
+The app isn't localised for my language!
+> *i18n\* is planned for a future release, but getting language support relies on people to volunteer and translate the strings. If you want to help translate the project, see the GitHub for instructions.*
+<sub>*i18n stands for internationalisation</sub>
 
 ## Contributing
 
