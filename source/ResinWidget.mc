@@ -50,7 +50,7 @@ class ResinWidget extends Application.AppBase {
             // is it set? censor it
             if (UID != 0 && UID != null) {
                 censored_uid = UID.toString().substring(0, 2)
-                + (UID.toString().length() == 9 ? "*****" : "******")
+                + "***"
                 + UID.toString().substring(-2,null);
             }
             // log it
