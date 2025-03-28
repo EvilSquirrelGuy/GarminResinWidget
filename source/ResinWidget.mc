@@ -34,19 +34,25 @@ class ResinWidget extends Application.AppBase {
     }
 
     function onSettingsChanged() as Void {
+        // assume the server based on the uid identifying digit
         var UID = Properties.getValue("game_uid");
         var serverDigit = UID.toString().toCharArray()[0].toString().toNumber();  // get one character
         var region = "os_";
 
+        // server mappings
         if (serverDigit == 6) { region = "os_usa"; }  // NA
         else if (serverDigit == 7) { region = "os_euro"; }  // EU
         else if (serverDigit == 8 || (serverDigit == 1 && UID.toString().length() == 10)) { region = "os_asia"; }  // Asia
         else if (serverDigit == 9) { region = "os_cht"; } // SAR
 
+        // log
         System.println("Uid begins with " + serverDigit.toString() + ". Setting region to " + region + ".");
-
+        // update properties
         Properties.setValue("region", region);
-
+        
+        // trigger config reload
+        resinModel.loadConfigData();
+        // update resin data with our new data!
         resinModel.updateResinData();
     }
 

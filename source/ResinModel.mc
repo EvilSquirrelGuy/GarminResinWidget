@@ -128,10 +128,10 @@ class ResinModel {
 
   const URL = "https://bbs-api-os.hoyolab.com/game_record/genshin/api/dailyNote";
 
-  const ltoken_v2 = Properties.getValue("ltoken_v2");
-  const ltuid_v2 = Properties.getValue("ltuid_v2");
-  const UID = Properties.getValue("game_uid");
-  const region = Properties.getValue("region");
+  hidden var ltoken_v2;
+  hidden var ltuid_v2;
+  hidden var UID;
+  hidden var region;
 
   var resinData = null;
 
@@ -140,11 +140,24 @@ class ResinModel {
   function initialize(cb) {
     System.println("Initialising ResinModel...");
     callback = cb;
+    loadConfigData();
     // update the resin data
     updateResinData();
   }
 
+  function loadConfigData() {
+    // logs logs logs
+    System.println("Reading data from config file...");
+    // load the data
+    ltoken_v2 = Properties.getValue("ltoken_v2");
+    ltuid_v2 = Properties.getValue("ltuid_v2");
+    UID = Properties.getValue("game_uid");
+    region = Properties.getValue("region");
+  }
+
   function invalidateCache() {
+    // log
+    System.println("Invalidating cache...");
     // remove our cached version of the resinData
     resinData = null;
     // invalidate the cache so we don't read from storage
