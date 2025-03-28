@@ -52,6 +52,8 @@ class ResinWidget extends Application.AppBase {
         
         // trigger config reload
         resinModel.loadConfigData();
+        // invalidate the existing cache so we have to refresh
+        resinModel.invalidateCache();
         // update resin data with our new data!
         resinModel.updateResinData();
     }
