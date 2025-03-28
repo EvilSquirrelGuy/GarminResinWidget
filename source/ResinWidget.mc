@@ -55,6 +55,7 @@ class ResinWidget extends Application.AppBase {
             }
             // log it
             System.println("Error - Invalid UID: " + censored_uid);
+            resinModel.invalidateCache();
             return;
         }
 
@@ -67,6 +68,7 @@ class ResinWidget extends Application.AppBase {
         else if (serverDigit == 9) { region = "os_cht"; } // SAR
         else {
             System.println("Error: No server found for digit \"" + serverDigit.toString() + "\"");
+            resinModel.invalidateCache();
             return;
         }
 
