@@ -28,13 +28,13 @@ class ResinDelegate extends WatchUi.BehaviorDelegate {
 
   function onKey(keyEvent) {
     // pressing menu invalidates the cache and forces an api refresh
-    // or holding back
-    // System.println(keyEvent.getKey() + "; " + keyEvent.getType());
+    // AKA holding back
     if (keyEvent.getKey() == WatchUi.KEY_MENU) { // || (keyEvent.getKey() == WatchUi.KEY_START && keyEvent.getType() == WatchUi.CLICK_TYPE_HOLD)) {
-      System.println("Invalidating cache...");
       resinModel.invalidateCache();
+      return true;
     }
-    return true;
+    // otherwise it wasn't handled so pass to system...
+    return false;
   }
 
   function onHold(clickEvent){
