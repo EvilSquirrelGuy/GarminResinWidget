@@ -67,7 +67,7 @@ class ResinWidget extends Application.AppBase {
         else if (serverDigit == 8) { region = "os_asia"; }  // Asia
         else if (serverDigit == 9) { region = "os_cht"; } // SAR
         else {
-            System.println("Error: No server found for digit \"" + serverDigit.toString() + "\"");
+            System.println("Error: No server found for digit " + serverDigit.toString());
             resinModel.invalidateCache();
             return;
         }
